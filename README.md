@@ -1,4 +1,4 @@
-# Hospital_manage
+# Hospital_management
 
 Mỗi người tạo một branch của tên mình. Sau khi codes xong push lên nhánh bạn, lên GitHub để tạo một pull request.
 
