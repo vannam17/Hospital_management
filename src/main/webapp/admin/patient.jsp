@@ -27,16 +27,16 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th scope="col">Full Name</th>
-							<th scope="col">Gender</th>
-							<th scope="col">Age</th>
-							<th scope="col">Appointment</th>
+							<th scope="col">Tên đầy đủ</th>
+							<th scope="col">Giới tính</th>
+							<th scope="col">Tuổi</th>
+							<th scope="col">Cuộc hẹn khám</th>
 							<th scope="col">Email</th>
-							<th scope="col">Mob No</th>
-							<th scope="col">Diseases</th>
-							<th scope="col">Doctor Name</th>
-							<th scope="col">Address</th>
-							<th scope="col">Status</th>
+							<th scope="col">Số điện thoại</th>
+							<th scope="col">Bệnh</th>
+							<th scope="col">Tên bác sĩ</th>
+							<th scope="col">Địa chỉ</th>
+							<th scope="col">Tình trạng</th>
 						</tr>
 					</thead>
 					<tbody>

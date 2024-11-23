@@ -49,13 +49,13 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Full Name</th>
-									<th scope="col">Gender</th>
-									<th scope="col">Age</th>
-									<th scope="col">Appoint Date</th>
-									<th scope="col">Diseases</th>
-									<th scope="col">Doctor Name</th>
-									<th scope="col">Status</th>
+									<th scope="col">Tên đầy đủ</th>
+									<th scope="col">Giới tính</th>
+									<th scope="col">Tuổi</th>
+									<th scope="col">Ngày hẹn</th>
+									<th scope="col">Bệnh</th>
+									<th scope="col">Tên bác sĩ</th>
+									<th scope="col">Trạng thái</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -77,7 +77,7 @@
 									<td>
 										<%
 										if ("Pending".equals(ap.getStatus())) {
-										%> <a href="#" class="btn btn-sm btn-warning">Pending</a> <%
+										%> <a href="#" class="btn btn-sm btn-warning">Chưa giải quyết</a> <%
                                         } else {
                                         %> <%=ap.getStatus()%> <%
                                         }

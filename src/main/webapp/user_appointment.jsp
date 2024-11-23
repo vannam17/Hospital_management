@@ -49,7 +49,7 @@ response.setDateHeader("Expires", 0);
 			<div class="col-md-6">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="text-center fs-3">User Appointment</p>
+						<p class="text-center fs-3">Cuộc hẹn của người dùng</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-4 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -63,7 +63,7 @@ response.setDateHeader("Expires", 0);
 							<input type="hidden" name="userid" value="${userObj.id }">
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Full Name</label> <input
+								<label for="inputEmail4" class="form-label">Tên đầy đủ</label> <input
 									required type="text" class="form-control" name="fullname">
 							</div>
 
@@ -76,13 +76,12 @@ response.setDateHeader("Expires", 0);
 							</div>
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Age</label> <input
+								<label for="inputEmail4" class="form-label">Tuổi</label> <input
 									required type="number" class="form-control" name="age">
 							</div>
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Appointment
-									Date</label> <input type="date" class="form-control" required
+								<label for="inputEmail4" class="form-label">Ngày hẹn</label> <input type="date" class="form-control" required
 									name="appoint_date">
 							</div>
 
@@ -92,19 +91,19 @@ response.setDateHeader("Expires", 0);
 							</div>
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Phone No</label> <input
+								<label for="inputEmail4" class="form-label">Số điện</label> <input
 									maxlength="10" required type="number" class="form-control"
 									name="phno">
 							</div>
 
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Diseases</label> <input
+								<label for="inputEmail4" class="form-label">Bệnh</label> <input
 									required type="text" class="form-control" name="diseases">
 							</div>
 
 							<div class="col-md-6">
-								<label for="inputPassword4" class="form-label">Doctor</label> <select
+								<label for="inputPassword4" class="form-label">Bác sĩ</label> <select
 									required class="form-control" name="doct">
 									<option value="">--select--</option>
 
@@ -122,7 +121,7 @@ response.setDateHeader("Expires", 0);
 							</div>
 
 							<div class="col-md-12">
-								<label>Full Address</label>
+								<label>Địa chỉ đầy đủ</label>
 								<textarea required name="address" class="form-control" rows="3"
 									cols=""></textarea>
 							</div>

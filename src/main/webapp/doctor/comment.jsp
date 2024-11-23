@@ -42,7 +42,7 @@
 			<div class="col-md-6 offset-md-3">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="text-center fs-4">Patient Comment</p>
+						<p class="text-center fs-4">Nhận xét của bệnh nhân</p>
 
 						<%
 						int id = Integer.parseInt(request.getParameter("id"));
@@ -73,7 +73,7 @@
 							</div>
 
 							<div class="col-md-12">
-								<br> <label>Comment</label>
+								<br> <label>Bình luận</label>
 								<textarea required name="comm" class="form-control" row="3"
 									cols=""></textarea>
 							</div>

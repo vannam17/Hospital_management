@@ -28,7 +28,7 @@
 			<div class="col-md-12">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-3 text-center">Doctor Details</p>
+						<p class="fs-3 text-center">Chi tiết bác sĩ</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -40,13 +40,13 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Full Name</th>
-									<th scope="col">DOB</th>
-									<th scope="col">Qualification</th>
-									<th scope="col">Specialist</th>
+									<th scope="col">Tên đầy đủ</th>
+									<th scope="col">Ngày sinh</th>
+									<th scope="col">Trình độ chuyên môn</th>
+									<th scope="col">Chuyên khoa</th>
 									<th scope="col">Email</th>
-									<th scope="col">Mob No</th>
-									<th scope="col">Action</th>
+									<th scope="col">Số điện thoại</th>
+									<th scope="col">Hành động</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -63,11 +63,11 @@
 									<td><%=d.getEmail()%></td>
 									<td><%=d.getMobNo()%></td>
 									<td><a href="edit_doctor.jsp?id=<%=d.getId()%>"
-										class="btn btn-sm btn-primary">Edit</a> 
+										class="btn btn-sm btn-primary">Chỉnh sửa</a>
 										
 										<a
 										href="../deleteDoctor?id=<%=d.getId()%>"
-										class="btn btn-sm btn-danger">Delete</a></td>
+										class="btn btn-sm btn-danger">Xóa</a></td>
 								</tr>
 								<%
 								}

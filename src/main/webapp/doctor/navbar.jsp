@@ -12,8 +12,8 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item"><a class="nav-link" href="index.jsp">HOME</a></li>
-				<li class="nav-item"><a class="nav-link" href="patient.jsp">PATIENT</a></li>
+				<li class="nav-item"><a class="nav-link" href="index.jsp">TRANG CHỦ</a></li>
+				<li class="nav-item"><a class="nav-link" href="patient.jsp">BỆNH NHÂN</a></li>
 			</ul>
 
 			<form class="d-flex">
@@ -24,9 +24,9 @@
 						<i class="fas fa-user-circle"></i> ${doctObj.fullName }
 					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-						<li><a class="dropdown-item" href="edit_profile.jsp">Edit
-								Profile</a></li>
-						<li><a class="dropdown-item" href="../doctorLogout">Logout</a></li>
+						<li><a class="dropdown-item" href="edit_profile.jsp">Chỉnh sửa
+								hồ sơ</a></li>
+						<li><a class="dropdown-item" href="../doctorLogout">Đăng xuất</a></li>
 					</ul>
 				</div>
 			</form>

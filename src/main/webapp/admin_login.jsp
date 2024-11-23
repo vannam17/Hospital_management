@@ -22,7 +22,7 @@
 			<div class="col-md-4 offset-md-4">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-4 text-center">Admin Login</p>
+						<p class="fs-4 text-center">Quản trị viên đăng nhập</p>
 					
 						<c:if test="${not empty succMsg }">
 							<p class="text-center text-success fs-3">${succMsg}</p>
@@ -36,16 +36,16 @@
 						
 						<form action="adminLogin" method="post">
 							<div class="mb-3">
-								<label class="form-label">Email address</label> <input required
+								<label class="form-label">Địa chỉ email</label> <input required
 									name="email" type="email" class="form-control">
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Password</label> <input required
+								<label class="form-label">Mật khẩu</label> <input required
 									name="password" type="password" class="form-control">
 							</div>
 
-							<button type="submit" class="btn bg-success text-white col-md-12">Login</button>
+							<button type="submit" class="btn bg-success text-white col-md-12">Đăng nhập</button>
 						</form>
 					
 					</div>

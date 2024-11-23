@@ -106,7 +106,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Tiêu đề</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
 				</div>
@@ -114,11 +114,11 @@
 					<form action="../addSpecialist" method="post">
 
 						<div class="form-group">
-							<label>Enter Specialist Name</label> <input type="text"
+							<label>Nhập tên chuyên khoa</label> <input type="text"
 								name="specName" class="form-control">
 						</div>
 						<div class="text-center mt-3">
-							<button type="submit" class="btn btn-primary">Add</button>
+							<button type="submit" class="btn btn-primary">Thêm</button>
 						</div>
 
 					</form>
@@ -126,7 +126,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
+						data-bs-dismiss="modal">Đóng</button>
 
 				</div>
     </div>
