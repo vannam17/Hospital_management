@@ -52,6 +52,7 @@
 									<th scope="col">Diseases</th>
 									<th scope="col">Status</th>
 									<th scope="col">Action</th>
+									<th scope="col">Thao tác</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -75,15 +76,21 @@
 										if ("Pending".equals(ap.getStatus())) {
 										%> 
 										<a href="comment.jsp?id=<%=ap.getId()%>"
-										class="btn btn-success btn-sm">Comment</a>
+										class="btn btn-success btn-sm " style="width:100px">Chưa duyệt</a>
 										 <%
 										 } else {
 										 %> 
-										 <a href="comment.jsp" class="btn btn-success btn-sm disabled">Comment</a> 
+										 <a href="comment.jsp" class="btn btn-success btn-sm disabled"style="width:100px">Đã duyệt</a> 
 										 <%
 										 }
 										 %>
 									</td>
+									<td><a href="edit_patient.jsp?id=<%=ap.getId()%>"
+										class="btn btn-sm btn-primary">Edit</a> 
+										
+										<a
+										href="../deleteDoctor?id=<%=d.getId()%>"
+										class="btn btn-sm btn-danger">Delete</a></td>
 								</tr>
 								<%
 								}

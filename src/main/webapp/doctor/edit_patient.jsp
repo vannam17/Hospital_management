@@ -50,41 +50,7 @@
 
 						Appointment ap = dao.getAppointmentById(id);
 						%>
-						<form class="row" action="../updateStatus" method="post">
-						    
-						    <div class="col-md-6">
-						        <label>Tên bệnh nhân</label> 
-						        <input type="text" readonly value="<%=ap.getFullName()%>" class="form-control">
-						    </div>
-						
-					
-						    <div class="col-md-6">
-						        <label>Tuổi</label> 
-						        <input type="text" readonly value="<%=ap.getAge()%>" class="form-control">
-						    </div>
-						
-						   
-						    <div class="col-md-6">
-						        <br> 
-						        <label>Số điện thoại</label> 
-						        <input type="text" readonly value="<%=ap.getPhNo()%>" class="form-control">
-						    </div>
-						
-						
-						    <div class="col-md-6">
-						        <br> 
-						        <label>Triệu chứng</label> 
-						        <input type="text" readonly value="<%=ap.getDiseases()%>" class="form-control">
-						    </div>
-						
-						  
-						    <div class="col-md-12">
-						        <br> 
-						        <label>Comment</label>
-						        <textarea required name="comm" class="form-control" rows="3"></textarea>
-						    </div>
-						
-					
+						<form class="row" action="../updatePatient" method="post">
 						    <div class="col-md-6">
 						        <br> 
 						        <label>Huyết áp (mmHg)</label> 
@@ -118,13 +84,6 @@
 						        <textarea name="prescription" class="form-control" rows="3" placeholder="Nhập mô tả đơn thuốc..." required></textarea>
 						    </div>
 						
-						   
-						
-						    <!-- Hidden Fields -->
-						    <input type="hidden" name="id" value="<%=ap.getId()%>"> 
-						    <input type="hidden" name="did" value="<%=ap.getDoctorId()%>">
-						
-						    <!-- Submit Button -->
 						    <button class="mt-3 btn btn-primary col-md-6 offset-md-3">Submit</button>
 						</form>
 

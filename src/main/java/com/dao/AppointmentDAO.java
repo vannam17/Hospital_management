@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.entity.Appointment;
+import com.entity.Doctor;
 
 public class AppointmentDAO {
 
@@ -206,6 +207,25 @@ public class AppointmentDAO {
 		}
 
 		return list;
+	}
+
+	public boolean deleteAppointment(int id) {
+		boolean f = false;
+		try {
+			String sql = "delete from appointment where id=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+
+			int i = ps.executeUpdate();
+			if (i == 1) {
+				f = true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return f;
 	}
 
 }

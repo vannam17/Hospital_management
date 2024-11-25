@@ -1,9 +1,7 @@
-<%@page import="com.entity.Doctor"%>
-<%@page import="com.dao.DoctorDao"%>
-<%@page import="com.entity.Specalist"%>
+<%@page import="com.entity.User"%>
+<%@page import="com.dao.UserDao"%>
 <%@page import="java.util.List"%>
 <%@page import="com.db.DBConnect"%>
-<%@page import="com.dao.SpecialistDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,10 +23,10 @@
 
 			
 			
-			<div class="col-md-12">
+			<div class="col-md-8 offset-md-2">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-3 text-center">Danh sách bác sĩ</p>
+						<p class="fs-3 text-center">Danh sách người dùng</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -41,32 +39,22 @@
 							<thead>
 								<tr>
 									<th scope="col">Họ và tên</th>
-									<th scope="col">Ngày sinh</th>
-									<th scope="col">Trình độ</th>
-									<th scope="col">Chuyên khoa</th>
 									<th scope="col">Email</th>
-									<th scope="col">Số điện thoại</th>
 									<th scope="col">Thao tác</th>
 								</tr>
 							</thead>
 							<tbody>
 							<%
-								DoctorDao dao2 = new DoctorDao(DBConnect.getConn());
-								List<Doctor> list2 = dao2.getAllDoctor();
-								for (Doctor d : list2) {
+								UserDao dao2 = new UserDao(DBConnect.getConn());
+								List<User> list2 = dao2.getAllUser();
+								for (User d : list2) {
 								%>
 								<tr>
 									<td><%=d.getFullName()%></td>
-									<td><%=d.getDob()%></td>
-									<td><%=d.getQualification()%></td>
-									<td><%=d.getSpecialist()%></td>
 									<td><%=d.getEmail()%></td>
-									<td><%=d.getMobNo()%></td>
-									<td><a href="edit_doctor.jsp?id=<%=d.getId()%>"
-										class="btn btn-sm btn-primary">Edit</a> 
-										
+									<td>
 										<a
-										href="../deleteDoctor?id=<%=d.getId()%>"
+										href="../deleteUser?id=<%=d.getId()%>"
 										class="btn btn-sm btn-danger">Delete</a></td>
 								</tr>
 								<%

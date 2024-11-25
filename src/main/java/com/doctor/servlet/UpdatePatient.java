@@ -1,3 +1,4 @@
+
 package com.doctor.servlet;
 
 import java.io.IOException;
@@ -9,29 +10,34 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dao.AppointmentDAO;
 import com.dao.MedicalHistoryDAO;
 import com.db.DBConnect;
-import com.entity.Appointment;
 import com.entity.MedicalHistory;
 
-@WebServlet("/updateStatus")
-public class UpdateStatus extends HttpServlet {
+@WebServlet("/updatePatient")
+public class UpdatePatient extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 		try {
-			int id = Integer.parseInt(req.getParameter("id"));
-			int did = Integer.parseInt(req.getParameter("did"));
-			String comm = req.getParameter("comm");
+			int patientId = Integer.parseInt(req.getParameter("patientid"));
+			String bloodPressure = req.getParameter("bloodPressure");
+			String bloodSurgar = req.getParameter("bloodSurgar");
+			String weight = req.getParameter("weight");
+			String temperature = req.getParameter("temperature");
+			String medicalPres = req.getParameter("medicalPres");
+			
 
-			AppointmentDAO dao = new AppointmentDAO(DBConnect.getConn());
+			MedicalHistory mh = new MedicalHistory(patientId, bloodPressure, bloodSurgar, weight, temperature, medicalPres);
+			MedicalHistoryDAO dao= new MedicalHistoryDAO(DBConnect.getConn());
+			
+		
 
 			HttpSession session = req.getSession();
 
-			if (dao.updateCommentStatus(id, did, comm)) {
-				session.setAttribute("succMsg", "Comment Updated");
+			if (dao.addMedicalHistory(mh)) {
+				session.setAttribute("succMsg", "Add Medical History success");
 				resp.sendRedirect("doctor/patient.jsp");
 			} else {
 				session.setAttribute("errorMsg", "Something wrong on server");

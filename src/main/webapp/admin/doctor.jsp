@@ -26,7 +26,7 @@
 			<div class="col-md-5 offset-md-4 ">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-3 text-center">Add Doctor</p>
+						<p class="fs-3 text-center">Thêm bác sĩ</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -37,23 +37,23 @@
 						</c:if>
 						<form action="../addDoctor" method="post">
 							<div class="mb-3">
-								<label class="form-label">Full Name</label> <input type="text"
+								<label class="form-label">Họ và tên </label> <input type="text"
 									required name="fullname" class="form-control">
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">DOB</label> <input type="date"
+								<label class="form-label">Ngày sinh</label> <input type="date"
 									required name="dob" class="form-control">
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Qualification</label> <input required
+								<label class="form-label">Trình độ</label> <input required
 									name="qualification" type="text" class="form-control">
 							</div>
 							<div class="mb-3">
-								<label class="form-label">Specialist</label> <select name="spec"
+								<label class="form-label">Chuyên khoa</label> <select name="spec"
 									required class="form-control">
-									<option>--select--</option>
+									<option>--chọn chuyên khoa--</option>
 
 									<%
 									SpecialistDao dao = new SpecialistDao(DBConnect.getConn());
@@ -75,16 +75,16 @@
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Mob No</label> <input type="text"
+								<label class="form-label">Số điện thoại</label> <input type="text"
 									required name="mobno" class="form-control">
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Password</label> <input required
+								<label class="form-label">Mật khẩu</label> <input required
 									name="password" type="password" class="form-control">
 							</div>
 
-							<button type="submit" class="btn btn-primary">Submit</button>
+							<button type="submit" class="btn btn-primary">Gửi</button>
 						</form>
 					</div>
 				</div>

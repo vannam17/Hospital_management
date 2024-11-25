@@ -15,6 +15,10 @@ public class Specalist {
 		this.specialistName = specialistName;
 	}
 
+	public Specalist( String specialistName) {
+		super();
+		this.specialistName = specialistName;
+	}
 	public int getId() {
 		return id;
 	}

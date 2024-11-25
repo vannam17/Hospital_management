@@ -1,11 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page isELIgnored="false"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="index.jsp"><i
-			class="fas fa-clinic-medical"></i> HOSPITAL</a>
+			class="fas fa-clinic-medical"></i> Hospital</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 			data-bs-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -14,22 +12,22 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-				<li class="nav-item"><a class="nav-link active" href="index.jsp">TRANG CHỦ</a></li>
-				<li class="nav-item"><a class="nav-link active" href="doctor.jsp">BÁC SĨ</a></li>
-				<li class="nav-item"><a class="nav-link active" href="view_doctor.jsp">XEM BÁC SĨ</a></li>
-				<li class="nav-item"><a class="nav-link active" href="patient.jsp">BỆNH NHÂN</a></li>
-
-
+				<li class="nav-item"><a class="nav-link" href="index.jsp">HOME</a></li>
+				<li class="nav-item"><a class="nav-link" href="user_appointment.jsp">APPOITMENT</a></li>
+				<li class="nav-item"><a class="nav-link" href="view_appointment.jsp">VIEW APPOITMENT</a></li>
 			</ul>
 
 			<form class="d-flex">
 				<div class="dropdown">
 					<button class="btn btn-light dropdown-toggle" type="button"
 						id="dropdownMenuButton1" data-bs-toggle="dropdown"
-						aria-expanded="false">Admin</button>
+						aria-expanded="false">
+						<i class="fas fa-user-circle"></i> ${userObj.fullName }
+					</button>
 					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-						<li><a class="dropdown-item" href="../adminLogout">Logout</a></li>
+						<li><a class="dropdown-item" href="edit_profile.jsp">Edit
+								Profile</a></li>
+						<li><a class="dropdown-item" href="../doctorLogout">Logout</a></li>
 					</ul>
 				</div>
 			</form>

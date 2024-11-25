@@ -40,14 +40,14 @@ public class SpecialistDao {
 		Specalist s = null;
 
 		try {
-			String sql = "select * from specialist";
+			String sql = "select spec_name from specialist";
 			PreparedStatement ps = conn.prepareStatement(sql);
 
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
 				s = new Specalist();
-				s.setId(rs.getInt(1));
+				
 				s.setSpecialistName(rs.getString(2));
 				list.add(s);
 			}

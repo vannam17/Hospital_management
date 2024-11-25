@@ -52,43 +52,53 @@
 		<div class="row">
 			<div class="col-md-4 mt-4">
 				<div class="card paint-card">
-					<div class="card-body text-right text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #fba2f6 49%, #75cee8 80%);">
-						<i class="fas fa-user-md fa-3x"></i>
-						<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
-							Tổng bác sĩ <br><%=dao.countDoctor()%>
-						</p>
-					</div>
+			 		<a href="view_doctor.jsp" class="text-white text-decoration-none">
+						<div class="card-body text-right text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #fba2f6 49%, #75cee8 80%);">
+							<i class="fas fa-user-md fa-3x"></i>
+							<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
+								Tổng bác sĩ <br><%=dao.countDoctor()%>
+							</p>
+						</div>
+					</a>
 				</div>
+			
 			</div>
 		
 			<div class="col-md-4 mt-4">
-				<div class="card paint-card">
-					<div class="card-body text-rightr text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #f5b3c7 27%, #95eb95 94%);">
-						<i class="fas fa-user-circle fa-3x"></i>
-						<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
-							Tổng người dùng <br><%=dao.countUSer() %>
-						</p>
-					</div>
-				</div>
+			    <div class="card paint-card">
+			        <a href="view_user.jsp" class="text-white text-decoration-none">
+			            <div class="card-body text-right text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #f5b3c7 27%, #95eb95 94%);">
+			                <i class="fas fa-user-circle fa-3x"></i>
+			                <p class="fs-4 text-center ms-auto mb-0 fw-bold">
+			                    Tổng người dùng <br><%=dao.countUSer() %>
+			                </p>
+			            </div>
+			        </a>
+			    </div>
 			</div>
+
 		<div class="col-md-4 mt-4">
 				<div class="card paint-card">
-					<div class="card-body text-rightr text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #01cb75 27%, #9cb8ed 94%);">
-						<i class="fas fa-user-circle fa-3x"></i>
-						<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
-							Tổng bệnh nhân <br><%=dao.countPatient() %>
-						</p>
-					</div>
+					<a href="patient.jsp" class="text-white text-decoration-none">
+						<div class="card-body text-rightr text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #01cb75 27%, #9cb8ed 94%);">
+							<i class="fas fa-user-circle fa-3x"></i>
+							<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
+								Tổng bệnh nhân <br><%=dao.countPatient() %>
+							</p>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-md-4 mt-4">
 				<div class="card paint-card">
-					<div class="card-body text-right text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #9cb8ed 49%, #cd7cdb 80%);">
-						<i class="far fa-calendar-check fa-3x"></i>
-						<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
-							Tổng lịch hẹn <br><%=dao.countAppointment() %>
-						</p>
-					</div>
+					<a href="patient.jsp" class="text-white text-decoration-none">
+						<div class="card-body text-right text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #9cb8ed 49%, #cd7cdb 80%);">
+							<i class="far fa-calendar-check fa-3x"></i>
+							<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
+								Tổng lịch hẹn <br><%=dao.countAppointment() %>
+							</p>
+						</div>
+					</a>
 				</div>
 			</div>
 		
@@ -115,7 +125,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Thêm chuyên khoa</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal"
 						aria-label="Close"></button>
 				</div>
@@ -123,11 +133,11 @@
 					<form action="../addSpecialist" method="post">
 
 						<div class="form-group">
-							<label>Enter Specialist Name</label> <input type="text"
+							<label class="mb-2">Nhập tên chuyên khoa: </label> <input type="text"
 								name="specName" class="form-control">
 						</div>
 						<div class="text-center mt-3">
-							<button type="submit" class="btn btn-primary">Add</button>
+							<button type="submit" class="btn btn-primary">Thêm</button>
 						</div>
 
 					</form>
@@ -135,7 +145,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Close</button>
+						data-bs-dismiss="modal">Đóng</button>
 
 				</div>
     </div>

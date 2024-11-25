@@ -3,7 +3,10 @@ package com.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.entity.Doctor;
 import com.entity.User;
 
 public class UserDao {
@@ -94,6 +97,47 @@ public class UserDao {
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setString(1, newPassword);
 			ps.setInt(2, userid);
+
+			int i = ps.executeUpdate();
+			if (i == 1) {
+				f = true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return f;
+	}
+	public List<User> getAllUser() {
+		List<User> list = new ArrayList<User>();
+		User d = null;
+		try {
+
+			String sql = "select * from user_dtls order by id desc";
+			PreparedStatement ps = conn.prepareStatement(sql);
+
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				d = new User();
+				d.setId(rs.getInt(1));
+				d.setFullName(rs.getString(2));
+				d.setEmail(rs.getString(3));
+				d.setPassword(rs.getString(4));
+				list.add(d);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	public boolean deleteUser(int id) {
+		boolean f = false;
+		try {
+			String sql = "delete from user_dtls where id=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
 
 			int i = ps.executeUpdate();
 			if (i == 1) {

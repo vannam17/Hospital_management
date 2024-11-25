@@ -14,7 +14,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<%@include file="component/allcss.jsp"%>
+<%@include file="../component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -22,7 +22,7 @@
 
 .backImg {
 	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
-		url("img/hos1.jpg");
+		url("../img/hos1.jpg");
 	height: 20vh;
 	width: 100%;
 	background-size: cover;
@@ -34,7 +34,7 @@
 	<c:if test="${empty userObj }">
 		<c:redirect url="user_login.jsp"></c:redirect>
 	</c:if>
-	<%@include file="component/navbar.jsp"%>
+	<%@include file="navbar.jsp"%>
 
 	<div class="container-fulid backImg p-5">
 		<p class="text-center fs-2 text-white"></p>
@@ -56,6 +56,7 @@
 									<th scope="col">Diseases</th>
 									<th scope="col">Doctor Name</th>
 									<th scope="col">Status</th>
+									<th scope="col">Thao tác</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -83,6 +84,9 @@
                                         }
                                         %>
 									</td>
+									<td><a
+										href="../deleteAppointment?id=<%=ap.getId()%>"
+										class="btn btn-sm btn-danger">Delete</a></td>
 								</tr>
 								<%
 								}
@@ -94,7 +98,7 @@
 				</div>
 			</div>
 			<div class="col-md-3 p-3">
-				<img alt="" src="img/doc1.jpg">
+				<img alt="" src="../img/doc1.jpg">
 			</div>
 		</div>
 	</div>
