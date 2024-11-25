@@ -19,12 +19,13 @@ public class UserRegister extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		  req.setCharacterEncoding("UTF-8");
 
 		try {
 			String fullName = req.getParameter("fullname");
 			String email = req.getParameter("email");
 			String password = req.getParameter("password");
-
+			System.out.println("Full Name: " + fullName);
 			User u = new User(fullName, email, password);
 
 			UserDao dao = new UserDao(DBConnect.getConn());

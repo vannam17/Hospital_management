@@ -17,6 +17,7 @@ public class changePassword extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
 
 		int uid = Integer.parseInt(req.getParameter("uid"));
 		String oldPassword = req.getParameter("oldPassword");
