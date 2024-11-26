@@ -45,7 +45,7 @@
 	</div>
 	
 	<div class="container p-3">
-		<p class="text-center fs-2 ">Key Features of our Hospital</p>
+		<p class="text-center fs-2 ">Các đặc điểm nổi bật của bệnh viện chúng tôi</p>
 
 		<div class="row">
 			<div class="col-md-8 p-5">
@@ -53,36 +53,32 @@
 					<div class="col-md-6">
 						<div class="card paint-card">
 							<div class="card-body">
-								<p class="fs-5">100% Safety</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Voluptatem, inventore</p>
+								<p class="fs-5">An toàn 100%</p>
+								<p>Chúng tôi cam kết mang đến môi trường điều trị an toàn tuyệt đối, đảm bảo sức khỏe và sự an tâm cho bệnh nhân.</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="card paint-card">
 							<div class="card-body">
-								<p class="fs-5">Clean Environment</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Voluptatem, inventore</p>
+								<p class="fs-5">Môi trường sạch sẽ</p>
+								<p>Bệnh viện luôn duy trì không gian sạch sẽ và hợp vệ sinh, đáp ứng các tiêu chuẩn nghiêm ngặt về y tế.</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 mt-2">
 						<div class="card paint-card">
 							<div class="card-body">
-								<p class="fs-5">Friendly Doctors</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Voluptatem, inventore</p>
+								<p class="fs-5">Bác sĩ thân thiện</p>
+								<p>Đội ngũ bác sĩ giàu kinh nghiệm, luôn tận tâm chăm sóc và mang đến sự thoải mái cho bệnh nhân.</p>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-6 mt-2">
 						<div class="card paint-card">
 							<div class="card-body">
-								<p class="fs-5">Medical Research</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Voluptatem, inventore</p>
+								<p class="fs-5">Nghiên cứu y khoa</p>
+								<p>Chúng tôi tiên phong trong các nghiên cứu y khoa, không ngừng nâng cao chất lượng khám chữa bệnh.</p>
 							</div>
 						</div>
 					</div>
@@ -97,15 +93,15 @@
 	</div>
 	
 	<div class="container p-2">
-		<p class="text-center fs-2 ">Our Team</p>
+		<p class="text-center fs-2 ">Đội ngũ của chúng tôi</p>
 		
 		<div class="row">
 			<div class="col-md-3">
 				<div class="card paint-card">
 					<div class="card-body text-center">
 						<img src="img/doc11.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Samuani Simi</p>
-						<p class="fs-7">(CEO & Chairman)</p>
+						<p class="fw-bold fs-5">Nguyễn Văn A</p>
+						<p class="fs-7">(CEO & Founder)</p>
 					</div>
 				</div>
 			</div>
@@ -114,8 +110,8 @@
 				<div class="card paint-card">
 					<div class="card-body text-center">
 						<img src="img/doc7.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr.Siva Kumar</p>
-						<p class="fs-7">(Chief Doctor)</p>
+						<p class="fw-bold fs-5">Nguyễn Văn B</p>
+						<p class="fs-7">(Bác sĩ trưởng)</p>
 					</div>
 				</div>
 			</div>
@@ -124,8 +120,8 @@
 				<div class="card paint-card">
 					<div class="card-body text-center">
 						<img src="img/doc13.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Niuise Paule</p>
-						<p class="fs-7">(Chief Doctor)</p>
+						<p class="fw-bold fs-5">Trần Văn A</p>
+						<p class="fs-7">(Bác sĩ trưởng)</p>
 					</div>
 				</div>
 			</div>
@@ -134,8 +130,8 @@
 				<div class="card paint-card">
 					<div class="card-body text-center">
 						<img src="img/doc5.jpg" width="250px" height="300px">
-						<p class="fw-bold fs-5">Dr. Mathue Samuel</p>
-						<p class="fs-7">(Chief Doctor)</p>
+						<p class="fw-bold fs-5">Trần Thị B</p>
+						<p class="fs-7">(Bác sĩ trưởng)</p>
 					</div>
 				</div>
 			</div>

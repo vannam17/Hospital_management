@@ -11,26 +11,26 @@
       	<c:if test="${empty userObj }">
       
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="admin_login.jsp"><i class="fa-solid fa-right-to-bracket"></i> ADMIN</a></li>
+        aria-current="page" href="admin_login.jsp"><i class="fa-solid fa-right-to-bracket"></i>QUẢN TRỊ VIÊN</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="doctor_login.jsp">DOCTOR</a></li>
+        aria-current="page" href="doctor_login.jsp">BÁC SĨ</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_appointment.jsp">APPOINTMENT</a></li>
+        aria-current="page" href="user_appointment.jsp">CUỘC HẸN KHÁM</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_login.jsp">USER</a></li>
+        aria-current="page" href="user_login.jsp">NGƯỜI DÙNG</a></li>
 
 		</c:if>
 				
 				
 		<c:if test="${not empty userObj }">
 		<li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_appointment.jsp">APPOINTMENT</a></li>
+        aria-current="page" href="user_appointment.jsp">CUỘC HẸN KHÁM</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="view_appointment.jsp">VIEW APPOINTMENT</a></li>
+        aria-current="page" href="view_appointment.jsp">XEM CUỘC HẸN KHÁM</a></li>
 		
 		<div class="dropdown">
 			<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

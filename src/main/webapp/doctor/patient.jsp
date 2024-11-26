@@ -30,7 +30,7 @@
 			<div class="col-md-12">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-3 text-center">Patient Details</p>
+						<p class="fs-3 text-center">Chi tiết bệnh nhân</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-4 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -43,15 +43,15 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Full Name</th>
-									<th scope="col">Gender</th>
-									<th scope="col">Age</th>
-									<th scope="col">Appointment Date</th>
+									<th scope="col">Tên đầy đủ</th>
+									<th scope="col">Giới tính</th>
+									<th scope="col">Tuổi</th>
+									<th scope="col">Ngày hẹn khám</th>
 									<th scope="col">Email</th>
-									<th scope="col">Mob No</th>
-									<th scope="col">Diseases</th>
-									<th scope="col">Status</th>
-									<th scope="col">Action</th>
+									<th scope="col">Số điện thoại</th>
+									<th scope="col">Bệnh</th>
+									<th scope="col">Tình trạng</th>
+									<th scope="col">Hành động</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -75,11 +75,11 @@
 										if ("Pending".equals(ap.getStatus())) {
 										%> 
 										<a href="comment.jsp?id=<%=ap.getId()%>"
-										class="btn btn-success btn-sm">Comment</a>
+										class="btn btn-success btn-sm">Bình luận</a>
 										 <%
 										 } else {
 										 %> 
-										 <a href="comment.jsp" class="btn btn-success btn-sm disabled">Comment</a> 
+										 <a href="comment.jsp" class="btn btn-success btn-sm disabled">Bình luận</a>
 										 <%
 										 }
 										 %>
