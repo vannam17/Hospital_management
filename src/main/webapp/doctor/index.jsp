@@ -61,6 +61,7 @@
 			</div>
 			<div class="col-md-4 mt-4" >
 				<div class="card paint-card">
+				<a href="patient.jsp" class="text-white text-decoration-none">
 					<div class="card-body text-right text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #9cb8ed 49%, #cd7cdb 80%);">
 						<i class="far fa-calendar-check fa-3x"></i><br>
 						<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
@@ -68,6 +69,7 @@
 							<%=dao.countAppointmentByDocotrId(d.getId())%>
 						</p>
 					</div>
+					</a>
 				</div>
 			</div>
 		</div>

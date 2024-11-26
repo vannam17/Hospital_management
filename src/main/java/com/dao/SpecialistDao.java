@@ -58,6 +58,23 @@ public class SpecialistDao {
 
 		return list;
 	}
+	public boolean deleteSpecialist(int id) {
+		boolean f = false;
+		try {
+			String sql = "delete from specialist where id=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
 
+			int i = ps.executeUpdate();
+			if (i == 1) {
+				f = true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return f;
+	}
 
 }
