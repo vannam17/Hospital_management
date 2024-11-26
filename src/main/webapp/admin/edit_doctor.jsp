@@ -26,7 +26,7 @@
 			<div class="col-md-4 offset-md-4">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-3 text-center">Edit Doctor Details</p>
+						<p class="fs-3 text-center">Sửa thông tin</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -45,24 +45,24 @@
 
 						<form action="../updateDoctor" method="post">
 							<div class="mb-3">
-								<label class="form-label">Full Name</label> <input type="text"
+								<label class="form-label">Họ và tên</label> <input type="text"
 									required name="fullname" class="form-control"
 									value="<%=d.getFullName()%>">
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">DOB</label> <input type="date"
+								<label class="form-label">Ngày sinh</label> <input type="date"
 									value="<%=d.getDob()%>" required name="dob"
 									class="form-control">
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Qualification</label> <input required
+								<label class="form-label">Trình độ</label> <input required
 									value="<%=d.getQualification()%>" name="qualification"
 									type="text" class="form-control">
 							</div>
 							<div class="mb-3">
-								<label class="form-label">Specialist</label> <select name="spec"
+								<label class="form-label">Chuyên khoa</label> <select name="spec"
 									required class="form-control">
 									<option><%=d.getSpecialist()%></option>
 
@@ -87,19 +87,19 @@
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Mob No</label> <input type="text"
+								<label class="form-label">Số điện thoại</label> <input type="text"
 									value="<%=d.getMobNo()%>" required name="mobno"
 									class="form-control">
 							</div>
 
 							<div class="mb-3">
-								<label class="form-label">Password</label> <input required
+								<label class="form-label">Mật khẩu</label> <input required
 									value="<%=d.getPassword()%>" name="password" type="text"
 									class="form-control">
 							</div>
 							<input type="hidden" name="id" value="<%=d.getId()%>">
 
-							<button type="submit" class="btn btn-primary col-md-12">Update</button>
+							<button type="submit" class="btn btn-primary col-md-12">Cập nhật</button>
 						</form>
 					</div>
 				</div>

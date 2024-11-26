@@ -27,10 +27,10 @@ public class DeleteAppointment extends HttpServlet {
 		HttpSession session = req.getSession();
 
 		if (dao.deleteAppointment(id)) {
-			session.setAttribute("succMsg", "Appointment Delete Sucessfully..");
+			session.setAttribute("succMsg", "Xóa lịch thành công..");
 			resp.sendRedirect("view_appointment.jsp");
 		} else {
-			session.setAttribute("errorMsg", "something wrong on server");
+			session.setAttribute("errorMsg", "Xóa không thành công");
 			resp.sendRedirect("view_appointment.jsp");
 		}
 		

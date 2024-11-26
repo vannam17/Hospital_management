@@ -71,7 +71,7 @@
 									<td><%=ap.getDiseases()%></td>
 									<td>
 										<%
-										if ("Pending".equals(ap.getStatus())) {
+										if ("Chưa khám".equals(ap.getStatus())) {
 										%> 
 										<a href="comment.jsp?id=<%=ap.getId()%>"
 										class="btn btn-success btn-sm " style="width:100px">Chưa duyệt</a>
@@ -84,11 +84,11 @@
 										 %>
 									</td>
 									<td><a href="view_patient.jsp?id=<%=ap.getId()%>"
-										class="btn btn-sm btn-primary">View</a> 
+										class="btn btn-sm btn-primary">Xem</a> 
 										
 										<a
 										href="../doctorDeleteDoctor?id=<%=ap.getId()%>"
-										class="btn btn-sm btn-danger">Delete</a></td>
+										class="btn btn-sm btn-danger">Xóa</a></td>
 								</tr>
 								<%
 								}

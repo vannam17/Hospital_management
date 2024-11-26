@@ -35,11 +35,11 @@ public class UserRegister extends HttpServlet {
 			boolean f = dao.register(u);
 
 			if (f) {
-				session.setAttribute("sucMsg", "Register Succesfull");
+				session.setAttribute("sucMsg", "Đăng ký thành công");
 				resp.sendRedirect("signup.jsp");
 
 			} else {
-				session.setAttribute("errorMsg", "Something wrong on server");
+				session.setAttribute("errorMsg", "Đăng ký không thành công");
 				resp.sendRedirect("signup.jsp");
 			}
 		} catch (Exception e) {

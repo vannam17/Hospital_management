@@ -38,10 +38,10 @@ public class AddDoctor extends HttpServlet {
 			HttpSession session = req.getSession();
 
 			if (dao.registerDoctor(d)) {
-				session.setAttribute("succMsg", "Doctor Added Sucessfully..");
+				session.setAttribute("succMsg", "Thêm bác sĩ thành công..");
 				resp.sendRedirect("admin/doctor.jsp");
 			} else {
-				session.setAttribute("errorMsg", "something wrong on server");
+				session.setAttribute("errorMsg", "Thêm không thành công");
 				resp.sendRedirect("admin/doctor.jsp");
 			}
 

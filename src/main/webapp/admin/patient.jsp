@@ -76,8 +76,8 @@
 							<td>
 								
 								<a href="view_patient.jsp?id=<%=ap.getId()%>"
-										class="btn btn-sm btn-primary">View</a> 
-			                    <a href="../adminDeletePatient?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+										class="btn btn-sm btn-primary">Xem</a> 
+			                    <a href="../adminDeletePatient?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Xóa</a>
 			                </td>
 						</tr>
 						<%

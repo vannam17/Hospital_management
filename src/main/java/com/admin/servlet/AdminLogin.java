@@ -28,7 +28,7 @@ public class AdminLogin extends HttpServlet {
 				session.setAttribute("adminObj", new User());
 				resp.sendRedirect("admin/index.jsp");
 			} else {
-				session.setAttribute("errorMsg", "invalid email & password");
+				session.setAttribute("errorMsg", "Sai email hoặc mật khẩu");
 				resp.sendRedirect("admin_login.jsp");
 			}
 

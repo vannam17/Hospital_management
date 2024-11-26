@@ -63,11 +63,11 @@
 									<td><%=d.getEmail()%></td>
 									<td><%=d.getMobNo()%></td>
 									<td><a href="edit_doctor.jsp?id=<%=d.getId()%>"
-										class="btn btn-sm btn-primary">Edit</a> 
+										class="btn btn-sm btn-primary">Sửa</a> 
 										
 										<a
 										href="../deleteDoctor?id=<%=d.getId()%>"
-										class="btn btn-sm btn-danger">Delete</a></td>
+										class="btn btn-sm btn-danger">Xóa</a></td>
 								</tr>
 								<%
 								}

@@ -44,8 +44,7 @@
 			<div class="col-md-9">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-4 fw-bold text-center text-success">Appointment
-							List</p>
+						<p class="fs-4 fw-bold text-center text-success">Danh sách lịch khám</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-4 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -57,12 +56,12 @@
 						<table class="table">
 						    <thead>
 						        <tr>
-						            <th scope="col">Full Name</th>
-						            <th scope="col">Gender</th>
-						            <th scope="col">Age</th>
-						            <th scope="col">Appoint Date</th>
-						            <th scope="col">Diseases</th>
-						            <th scope="col">Doctor Name</th>
+						            <th scope="col">Họ và tên</th>
+						            <th scope="col">Giới tính</th>
+						            <th scope="col">Tuổi</th>
+						            <th scope="col">Ngày hẹn khám</th>
+						            <th scope="col">Bệnh án</th>
+						            <th scope="col">Bác sĩ</th>
 						            <th scope="col">Trạng thái</th>
 						            <th scope="col">Thao tác</th>
 						        </tr>
@@ -93,9 +92,9 @@
 						                    <td><%= d.getFullName() %></td>
 						                    <td>
 						                        <%
-												if ("Pending".equals(ap.getStatus())) {
+												if ("Chưa khám".equals(ap.getStatus())) {
 												%> 
-												<span class="btn btn-success btn-sm disabled"style="width:100px">Chưa duyệt</span> 
+												<span class="btn btn-warning  btn-sm disabled"style="width:100px">Chưa duyệt</span> 
 												 <%
 												 } else {
 												 %> 
@@ -106,8 +105,8 @@
 						                    </td>
 						                    <td>
 						                    <a href="view_patient.jsp?id=<%=ap.getId()%>"
-										class="btn btn-sm btn-primary">View</a>
-						                        <a href="deleteAppointment?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+										class="btn btn-sm btn-primary">Xem</a>
+						                        <a href="deleteAppointment?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Xóa</a>
 						                    </td>
 						                </tr>
 						        <%
@@ -127,5 +126,6 @@
 			</div>
 		</div>
 	</div>
+	
 </body>
 </html>

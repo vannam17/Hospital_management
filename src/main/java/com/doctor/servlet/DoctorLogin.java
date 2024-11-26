@@ -30,7 +30,7 @@ public class DoctorLogin extends HttpServlet{
 			session.setAttribute("doctObj", doctor);
 			resp.sendRedirect("doctor/index.jsp");
 		} else {
-			session.setAttribute("errorMsg", "invalid email & password");
+			session.setAttribute("errorMsg", "Sai email hoặc mật khẩu");
 			resp.sendRedirect("doctor_login.jsp");
 		}
 

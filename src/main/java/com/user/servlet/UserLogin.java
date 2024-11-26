@@ -1,4 +1,3 @@
-
 package com.user.servlet;
 
 import java.io.IOException;
@@ -17,7 +16,8 @@ import com.entity.User;
 @WebServlet("/userLogin")
 public class UserLogin extends HttpServlet {
 
-	@Override    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
 
@@ -30,7 +30,7 @@ public class UserLogin extends HttpServlet {
 			session.setAttribute("userObj", user);
 			resp.sendRedirect("index.jsp");
 		} else {
-			session.setAttribute("errorMsg", "invalid email & password");
+			session.setAttribute("errorMsg", "email hoặc mật khẩu không đúng");
 			resp.sendRedirect("user_login.jsp");
 		}
 

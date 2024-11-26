@@ -28,10 +28,10 @@ public class UpdateStatus extends HttpServlet {
 			HttpSession session = req.getSession();
 
 			if (dao.updateCommentStatus(id, did, comm)) {
-				session.setAttribute("succMsg", "Comment Updated");
+				session.setAttribute("succMsg", "Thêm thành công");
 				resp.sendRedirect("doctor/patient.jsp");
 			} else {
-				session.setAttribute("errorMsg", "Something wrong on server");
+				session.setAttribute("errorMsg", "Thêm không thành công");
 				resp.sendRedirect("doctor/patient.jsp");
 			}
 

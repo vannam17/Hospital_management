@@ -25,10 +25,10 @@ public class DeleteUser extends HttpServlet {
 		HttpSession session = req.getSession();
 
 		if (dao.deleteUser(id)) {
-			session.setAttribute("succMsg", "User Delete Sucessfully..");
+			session.setAttribute("succMsg", "Xóa người dùng thành công..");
 			resp.sendRedirect("admin/view_user.jsp");
 		} else {
-			session.setAttribute("errorMsg", "something wrong on server");
+			session.setAttribute("errorMsg", "Xóa không thành công");
 			resp.sendRedirect("admin/view_user.jsp");
 		}
 		

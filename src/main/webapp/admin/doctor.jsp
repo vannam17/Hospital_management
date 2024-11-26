@@ -51,9 +51,9 @@
 									name="qualification" type="text" class="form-control">
 							</div>
 							<div class="mb-3">
-								<label class="form-label">CHuyên khoa</label> <select name="spec"
+								<label class="form-label">Chuyên khoa</label> <select name="spec"
 									required class="form-control">
-									<option>--select--</option>
+									<option>--chọn chuyên khoa--</option>
 
 									<%
 									SpecialistDao dao = new SpecialistDao(DBConnect.getConn());

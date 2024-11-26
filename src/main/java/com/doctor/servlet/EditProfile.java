@@ -37,11 +37,11 @@ public class EditProfile extends HttpServlet {
 
 			if (dao.editDoctorProfile(d)) {
 				Doctor updateDoctor = dao.getDoctorById(id);
-				session.setAttribute("succMsgd", "Doctor Update Sucessfully..");
+				session.setAttribute("succMsgd", "Cập nhật thông tin thành công..");
 				session.setAttribute("doctObj", updateDoctor);
 				resp.sendRedirect("doctor/edit_profile.jsp");
 			} else {
-				session.setAttribute("errorMsgd", "something wrong on server");
+				session.setAttribute("errorMsgd", "Cập nhật không thành công");
 				resp.sendRedirect("doctor/edit_profile.jsp");
 			}
 

@@ -18,199 +18,11 @@ pageEncoding="UTF-8"%>
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
+   
+   
+   
   </head>
-  <style>
-    button,
-    input,
-    textarea {
-      font-family: "Inter", sans-serif;
-    }
-
-    button,
-    .btn {
-      border-radius: 8px;
-
-      /* Bo tròn tất cả các nút */
-    }
-
-    /* Styling for the header navigation menu */
-    header #menu a {
-      text-decoration: none;
-      /* Remove underline from links */
-    }
-
-    header #menu a:hover {
-      color: #007bff;
-      /* Blue color on hover */
-      background-color: transparent;
-      /* Ensure no background change */
-    }
-
-    /* Optional: To add background color change when hovering */
-    header #menu a {
-      padding: 10px 15px;
-      /* Ensure padding for proper click area */
-      border-radius: 5px;
-      /* Rounded corners for hover effect */
-    }
-
-    header #menu a:hover {
-      background-color: #007bff;
-      /* Blue background color on hover */
-      color: #fff;
-      /* Keep text white */
-    }
-
-    /* Default button style (blue background, white text) */
-    button,
-    .btn,
-    .btn-success {
-      background-color: #007bff;
-      /* Blue background */
-
-      border: 1px solid #007bff;
-      /* Blue border */
-      font-weight: bold;
-      /* Make the button text bold */
-    }
-
-    /* Button hover effect (lighter blue background) */
-    button:hover,
-    .btn:hover,
-    .btn-success:hover {
-      border-color: #0056b3;
-      /* Darker blue border */
-    }
-
-    /* Optional: Focused state (button when clicked) */
-    button:focus,
-    .btn:focus,
-    .btn-success:focus {
-      outline: none;
-      /* Remove the default focus outline */
-    }
-
-    /* Change the icons color to blue */
-    #services .single-key i,
-    #gallery .gallery-filter .btn {
-      color: #007bff;
-      background-color: white;
-      transition: all 0.3s ease;
-      /* Blue color */
-    }
-
-    /* Header container: Flexbox để giữ mọi thứ trên một hàng */
-    #nav-head .row {
-      display: flex;
-      align-items: center;
-      /* Căn giữa theo chiều dọc */
-      justify-content: space-between;
-      /* Phân phối đều không gian */
-      flex-wrap: nowrap;
-      /* Ngăn xuống hàng */
-    }
-
-    /* Logo HMS luôn căn trái */
-    .col-lg-2.col-md-3 {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      /* Căn sát trái */
-      white-space: nowrap;
-      /* Ngăn xuống hàng */
-    }
-
-    /* Menu chính */
-    #menu ul {
-      display: flex;
-      gap: 15px;
-      /* Khoảng cách giữa các mục menu */
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      white-space: nowrap;
-      /* Ngăn xuống hàng */
-    }
-
-    /* Các mục trong menu */
-    #menu ul li {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Nút hẹn khám: Căn phải */
-    .appoint {
-      margin-left: auto;
-      /* Đẩy sang phải */
-      white-space: nowrap;
-      /* Ngăn xuống hàng */
-    }
-
-    /* Chỉnh font chữ toàn bộ header */
-    .header-nav {
-      font-family: "Arial", sans-serif;
-      /* Chọn font chữ, thay bằng font bạn muốn */
-      font-size: 16px;
-      /* Cỡ chữ mặc định */
-      color: #000;
-      /* Màu chữ mặc định */
-    }
-
-    /* Chỉnh font chữ riêng cho HealthFlow */
-    .brand {
-      font-family: "Georgia", serif;
-      /* Font chữ cho tiêu đề */
-      font-size: 24px;
-      /* Kích thước chữ */
-      font-weight: bold;
-      /* Đậm chữ */
-      color: #000;
-      /* Màu chữ */
-    }
-
-    /* Chỉnh font chữ riêng cho menu */
-    .nav-item ul li a {
-      font-family: "Arial", sans-serif;
-      /* Font chữ đơn giản */
-      font-size: 15px;
-      /* Kích thước chữ */
-      color: #000;
-      /* Màu chữ */
-      text-transform: uppercase;
-      /* Viết hoa chữ */
-      font-weight: 500;
-      /* Độ đậm vừa phải */
-    }
-
-    /* Chỉnh font chữ riêng cho nút Đặt lịch hẹn khám */
-    .appoint a {
-      font-family: "Verdana", sans-serif;
-      /* Font chữ của nút */
-      font-size: 14px;
-      /* Kích thước chữ */
-      font-weight: bold;
-      /* Đậm chữ */
-      color: #fff;
-      /* Màu chữ */
-    }
-
-    /* Di chuyển nút sang phải */
-    .appoint {
-      margin-left: 40px;
-      margin-bottom: 20px;
-      /* Điều chỉnh khoảng cách, tăng giá trị nếu cần */
-    }
-
-    /* Dịch logo qua trái và lên trên */
-    .col-lg-2 {
-      margin-left: -10px;
-      /* Điều chỉnh giá trị âm để đưa logo sang trái */
-      margin-top: -10px;
-      /* Điều chỉnh giá trị âm để đưa logo lên trên */
-    }
-  </style>
+ 
   <body>
     <!-- Navbar -->
     <%@include file="component/navbar.jsp" %>
@@ -336,7 +148,7 @@ pageEncoding="UTF-8"%>
             <div class="card paint-card">
               <div class="card-body text-center">
                 <img src="img/doc11.jpg" width="250px" height="300px" />
-                <p class="fw-bold fs-5">Nguyễn Văn A</p>
+                <p class="fw-bold fs-5">Nguyễn Hồng Loan</p>
                 <p class="fs-7">(CEO & Founder)</p>
               </div>
             </div>
@@ -346,7 +158,7 @@ pageEncoding="UTF-8"%>
             <div class="card paint-card">
               <div class="card-body text-center">
                 <img src="img/doc7.jpg" width="250px" height="300px" />
-                <p class="fw-bold fs-5">Nguyễn Văn B</p>
+                <p class="fw-bold fs-5">Lê Thị Thanh Tú</p>
                 <p class="fs-7">(Bác sĩ trưởng)</p>
               </div>
             </div>
@@ -356,7 +168,7 @@ pageEncoding="UTF-8"%>
             <div class="card paint-card">
               <div class="card-body text-center">
                 <img src="img/doc13.jpg" width="250px" height="300px" />
-                <p class="fw-bold fs-5">Trần Văn A</p>
+                <p class="fw-bold fs-5">Lê Văn Phúc</p>
                 <p class="fs-7">(Bác sĩ trưởng)</p>
               </div>
             </div>
@@ -366,7 +178,7 @@ pageEncoding="UTF-8"%>
             <div class="card paint-card">
               <div class="card-body text-center">
                 <img src="img/doc5.jpg" width="250px" height="300px" />
-                <p class="fw-bold fs-5">Trần Thị B</p>
+                <p class="fw-bold fs-5">Trịnh Văn Nam</p>
                 <p class="fs-7">(Bác sĩ trưởng)</p>
               </div>
             </div>
