@@ -38,12 +38,8 @@ public class UserDao {
 
 		return f;
 	}
-<<<<<<< HEAD
-
-=======
 	
 	
->>>>>>> 71b044ebac4d3d540efdaac9db0d5337b6cd5eed
 	public User login(String em, String psw) {
 		User u = null;
 
@@ -69,10 +65,6 @@ public class UserDao {
 
 		return u;
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> 71b044ebac4d3d540efdaac9db0d5337b6cd5eed
 	public boolean checkOldPassword(int userid, String oldPassword) {
 		boolean f = false;
 
