@@ -224,6 +224,23 @@ public class DoctorDao {
 		return i;
 	}
 
+	public int countPatient() {
+		int i = 0;
+		try {
+			String sql = "select distinct fullname, email from appointment";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				
+				i++;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return i;
+	}
 	public int countUSer() {
 		int i = 0;
 		try {

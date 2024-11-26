@@ -1,3 +1,4 @@
+
 package com.user.servlet;
 
 import java.io.IOException;
@@ -16,8 +17,7 @@ import com.entity.User;
 @WebServlet("/userLogin")
 public class UserLogin extends HttpServlet {
 
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	@Override    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
 
