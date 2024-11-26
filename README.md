@@ -32,5 +32,7 @@ Trong Dự án này, chúng tôi hướng đến giải quyết các vấn đề
 2. **Sau đó lấy mã từ kho lưu trữ GitHub này trên hệ thống của bạn. Bạn có thể sao chép kho lưu trữ này hoặc tải xuống dưới dạng tệp zip.**
 - link github: https://github.com/vannam17/Hospital_management.git
 3. **Cài đặt cơ sở dữ liệu:** Tạo cơ sở dữ liệu trong MySQL và nhập các bảng cần thiết từ các file SQL có sẵn trong thư mục database
-4. **Chạy ứng dụng:** Sử dụng IDE (như IntelliJ IDEA hoặc Eclipse) để mở dự án và chạy ứng dụng web này trên máy chủ Tomcat của mình - phiên bản 9.0 là tốt nhất.
+4. **Thiết lập kết nội cơ sở dữ liệu :**  Truy cập vào đường dẫn để thay đổi username và password phù hợp theo máy của bạn
+  \hospital\src\main\java\com\db\DBConnect.java
+5. **Chạy ứng dụng:** Sử dụng IDE (như IntelliJ IDEA hoặc Eclipse) để mở dự án và chạy ứng dụng web này trên máy chủ Tomcat của mình - phiên bản 9.0 là tốt nhất.
 
