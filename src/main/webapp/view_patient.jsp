@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-	<%@include file="navbar.jsp"%>
+	<%@include file="component/navbar.jsp"%>
 	
 							<!-- Chi tiết bệnh nhân -->
         <div class="row mt-4">

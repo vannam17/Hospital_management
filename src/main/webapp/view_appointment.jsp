@@ -63,7 +63,7 @@
 						            <th scope="col">Appoint Date</th>
 						            <th scope="col">Diseases</th>
 						            <th scope="col">Doctor Name</th>
-						            <th scope="col">Status</th>
+						            <th scope="col">Trạng thái</th>
 						            <th scope="col">Thao tác</th>
 						        </tr>
 						    </thead>
@@ -93,18 +93,20 @@
 						                    <td><%= d.getFullName() %></td>
 						                    <td>
 						                        <%
-						                        if ("Pending".equals(ap.getStatus())) {
-						                        %>
-						                            <a href="#" class="btn btn-sm btn-warning">Pending</a>
-						                        <%
-						                        } else {
-						                        %>
-						                            <%= ap.getStatus() %>
-						                        <%
-						                        }
-						                        %>
+												if ("Pending".equals(ap.getStatus())) {
+												%> 
+												<span class="btn btn-success btn-sm disabled"style="width:100px">Chưa duyệt</span> 
+												 <%
+												 } else {
+												 %> 
+												 <span class="btn btn-success btn-sm disabled"style="width:100px">Đã duyệt</span> 
+												 <%
+												 }
+												 %>
 						                    </td>
 						                    <td>
+						                    <a href="view_patient.jsp?id=<%=ap.getId()%>"
+										class="btn btn-sm btn-primary">View</a>
 						                        <a href="deleteAppointment?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
 						                    </td>
 						                </tr>

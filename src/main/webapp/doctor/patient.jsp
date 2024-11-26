@@ -50,7 +50,6 @@
 									<th scope="col">Email</th>
 									<th scope="col">Số điện thoại</th>
 									<th scope="col">Bệnh trạng</th>
-									<th scope="col">Trạng thái</th>
 									<th scope="col">Hành động</th>
 									<th scope="col">Thao tác</th>
 								</tr>
@@ -70,7 +69,6 @@
 									<td><%=ap.getEmail()%></td>
 									<td><%=ap.getPhNo()%></td>
 									<td><%=ap.getDiseases()%></td>
-									<td><%=ap.getStatus()%></td>
 									<td>
 										<%
 										if ("Pending".equals(ap.getStatus())) {
@@ -85,7 +83,7 @@
 										 }
 										 %>
 									</td>
-									<td><a href="#?id=<%=ap.getId()%>"
+									<td><a href="view_patient.jsp?id=<%=ap.getId()%>"
 										class="btn btn-sm btn-primary">View</a> 
 										
 										<a

@@ -23,7 +23,7 @@
 	<div class="col-md-12">
 		<div class="card paint-card">
 			<div class="card-body">
-				<p class="fs-3 text-center">Lịch đặt hẹn khám</p>
+				<p class="fs-3 text-center">Danh sách lịch hẹn</p>
 				<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -34,16 +34,16 @@
 						</c:if>
 				<table class="table">
 					<thead>
-						<tr><th scope="col">Ngày đặt lịch</th>
+						<tr>
+							<th scope="col">Ngày hẹn khám</th>
 							<th scope="col">Họ và tên</th>
 							<th scope="col">Giới tính</th>
-							<th scope="col">Tuổi</th>				
+							<th scope="col">Tuổi</th>					
 							<th scope="col">Email</th>
-							<th scope="col">Số điện thoại</th>
-							<th scope="col">Bệnh trạng</th>
+							<th scope="col">Số điện thoại liên hệ</th>
+							
 							<th scope="col">Bác sĩ</th>
-							<th scope="col">Địa chỉ</th>
-							<th scope="col">Trạng Thái</th>
+						
 							<th scope="col">Thao tác</th>
 						</tr>
 					</thead>
@@ -63,19 +63,20 @@
 							Doctor d = dao2.getDoctorById(ap.getDoctorId());
 						%>
 						<tr>
-							<th><%=ap.getAppoinDate()%></th>
-							<td><%=ap.getFullName()%></td>
+						<th><%=ap.getAppoinDate()%></th>
+							<th><%=ap.getFullName()%></th>
 							<td><%=ap.getGender()%></td>
-							<td><%=ap.getAge()%></td>
+							<td><%=ap.getAge()%></td>							
 							<td><%=ap.getEmail()%></td>
 							<td><%=ap.getPhNo()%></td>
-							<td><%=ap.getDiseases()%></td>
+							
 							<td><%=d.getFullName()%></td>
-							<td><%=ap.getAddress()%></td>
-							<<td><%=ap.getStatus()%></td> 
+							
+							<!-- <td><%=ap.getStatus()%></td> -->
 							<td>
-								<!-- Còn cái view nữa -->
-			                    <a href="../adminDeleteAppointment?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+								<a href="view_patient.jsp?id=<%=ap.getId()%>"
+										class="btn btn-sm btn-primary">View</a>
+			                    <a href="../adminDeletePatient?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
 			                </td>
 						</tr>
 						<%

@@ -35,15 +35,15 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th scope="col">Full Name</th>
-							<th scope="col">Gender</th>
-							<th scope="col">Age</th>
-							<th scope="col">Appointment</th>
+							<th scope="col">Họ và tên</th>
+							<th scope="col">Giới tính</th>
+							<th scope="col">Tuổi</th>
+							<th scope="col">Ngày hẹn khám</th>
 							<th scope="col">Email</th>
-							<th scope="col">Mob No</th>
-							<th scope="col">Diseases</th>
-							<th scope="col">Doctor Name</th>
-							<th scope="col">Address</th>
+							<th scope="col">Số điện thoại</th>
+							
+							<th scope="col">Bác sĩ</th>
+							
 							<th scope="col">Thao tác</th>
 						</tr>
 					</thead>
@@ -69,12 +69,14 @@
 							<td><%=ap.getAppoinDate()%></td>
 							<td><%=ap.getEmail()%></td>
 							<td><%=ap.getPhNo()%></td>
-							<td><%=ap.getDiseases()%></td>
+							
 							<td><%=d.getFullName()%></td>
-							<td><%=ap.getAddress()%></td>
+							
 							<!-- <td><%=ap.getStatus()%></td> -->
 							<td>
-								<!-- Còn cái view nữa -->
+								
+								<a href="view_patient.jsp?id=<%=ap.getId()%>"
+										class="btn btn-sm btn-primary">View</a> 
 			                    <a href="../adminDeletePatient?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
 			                </td>
 						</tr>
