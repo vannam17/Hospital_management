@@ -14,11 +14,21 @@ import com.db.DBConnect;
 import com.entity.User;
 
 
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 71b044ebac4d3d540efdaac9db0d5337b6cd5eed
 @WebServlet("/user_register")
 public class UserRegister extends HttpServlet {
 
 	@Override
+<<<<<<< HEAD
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+=======
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+>>>>>>> 71b044ebac4d3d540efdaac9db0d5337b6cd5eed
 
 		try {
 			String fullName = req.getParameter("fullname");
@@ -34,13 +44,22 @@ public class UserRegister extends HttpServlet {
 			boolean f = dao.register(u);
 
 			if (f) {
+<<<<<<< HEAD
+
+				session.setAttribute("sucMsg", "Register Sucessfully");
+=======
 				session.setAttribute("sucMsg", "Register Succesfull");
+>>>>>>> 71b044ebac4d3d540efdaac9db0d5337b6cd5eed
 				resp.sendRedirect("signup.jsp");
 
 			} else {
 				session.setAttribute("errorMsg", "Something wrong on server");
 				resp.sendRedirect("signup.jsp");
 			}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 71b044ebac4d3d540efdaac9db0d5337b6cd5eed
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
