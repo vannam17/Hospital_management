@@ -1,5 +1,8 @@
 <%@page import="com.db.DBConnect"%>
 <%@page import="com.dao.DoctorDao"%>
+<%@page import="com.entity.Specalist"%>
+<%@page import="com.dao.SpecialistDao"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -91,7 +94,7 @@
 			</div>
 			<div class="col-md-4 mt-4">
 				<div class="card paint-card">
-					<a href="patient.jsp" class="text-white text-decoration-none">
+					<a href="view_appointment.jsp" class="text-white text-decoration-none">
 						<div class="card-body text-right text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #9cb8ed 49%, #cd7cdb 80%);">
 							<i class="far fa-calendar-check fa-3x"></i>
 							<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
@@ -116,40 +119,75 @@
 
 		</div>
 	</div>
-
-
-
+	
 	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Thêm chuyên khoa</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<form action="../addSpecialist" method="post">
-
-						<div class="form-group">
-							<label class="mb-2">Nhập tên chuyên khoa: </label> <input type="text"
-								name="specName" class="form-control">
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <h5 class="modal-title" id="exampleModalLabel">Thêm chuyên khoa</h5>
+	                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	            </div>
+	            <div class="modal-body">
+	                <form action="../addSpecialist" method="post">
+	                    <div class="form-group">
+	                        <label>Nhập tên chuyên khoa</label>
+	                        <input type="text" name="specName" class="form-control" required>
+	                    </div>
+	                    <div class="text-center mt-3">
+	                        <button type="submit" class="btn btn-primary">Thêm</button>
+	                    </div>
+	                </form>
+	                <!-- Bảng hiển thị thông tin chuyên khoa -->
+						<div class="container mt-4">
+						    <h3 class="text-center">Danh sách chuyên khoa</h3>
+						    <table class="table table-striped">
+						        <thead>
+						            <tr>
+						                <th scope="col">#</th>
+						                <th scope="col">Tên chuyên khoa</th>
+						                <th scope="col">Thao tác</th>
+						            </tr>
+						        </thead>
+						        <tbody>
+						            <%
+						            // Lấy danh sách chuyên khoa từ cơ sở dữ liệu
+						            SpecialistDao specialistDAO = new SpecialistDao(DBConnect.getConn());
+						            List<Specalist> specialists = specialistDAO.getAllSpecialist();
+						
+						            if (specialists.isEmpty()) {
+						            %>
+						                <tr>
+						                    <td colspan="3" class="text-center">Không có chuyên khoa nào</td>
+						                </tr>
+						            <%
+						            } else {
+						                int index = 1;
+						                for (Specalist spec : specialists) {
+						            %>
+						                    <tr>
+						                        <th scope="row"><%= index++ %></th>
+						                        <td><%= spec.getSpecialistName() %></td>
+						                        <td>
+						                            <a href="../deleteSpecialist?id=<%= spec.getId() %>" class="btn btn-sm btn-danger">Xóa</a>
+						                        </td>
+						                    </tr>
+						            <%
+						                }
+						            }
+						            %>
+						        </tbody>
+						    </table>
 						</div>
-						<div class="text-center mt-3">
-							<button type="submit" class="btn btn-primary">Thêm</button>
-						</div>
+	            </div>
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 
-					</form>
 
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary"
-						data-bs-dismiss="modal">Đóng</button>
 
-				</div>
-    </div>
-  </div>
-</div>
 </body>
 </html>

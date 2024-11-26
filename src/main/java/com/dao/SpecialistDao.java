@@ -40,14 +40,14 @@ public class SpecialistDao {
 		Specalist s = null;
 
 		try {
-			String sql = "select spec_name from specialist";
+			String sql = "select * from specialist";
 			PreparedStatement ps = conn.prepareStatement(sql);
 
 			ResultSet rs = ps.executeQuery();
 
 			while (rs.next()) {
 				s = new Specalist();
-				
+				s.setId(rs.getInt(1));
 				s.setSpecialistName(rs.getString(2));
 				list.add(s);
 			}
@@ -58,6 +58,23 @@ public class SpecialistDao {
 
 		return list;
 	}
+	public boolean deleteSpecialist(int id) {
+		boolean f = false;
+		try {
+			String sql = "delete from specialist where id=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
 
+			int i = ps.executeUpdate();
+			if (i == 1) {
+				f = true;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return f;
+	}
 
 }

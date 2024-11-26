@@ -10,17 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.dao.AppointmentDAO;
-import com.dao.MedicalHistoryDAO;
 import com.db.DBConnect;
-import com.entity.Appointment;
-import com.entity.MedicalHistory;
 
 @WebServlet("/updateStatus")
 public class UpdateStatus extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
+
 		try {
 			int id = Integer.parseInt(req.getParameter("id"));
 			int did = Integer.parseInt(req.getParameter("did"));

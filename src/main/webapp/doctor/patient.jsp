@@ -30,7 +30,7 @@
 			<div class="col-md-12">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-3 text-center">Patient Details</p>
+						<p class="fs-3 text-center">Danh sách bệnh nhân</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-4 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -43,15 +43,15 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Full Name</th>
-									<th scope="col">Gender</th>
-									<th scope="col">Age</th>
-									<th scope="col">Appointment Date</th>
+									<th scope="col">Họ và tên</th>
+									<th scope="col">Giới tính</th>
+									<th scope="col">Tuổi</th>
+									<th scope="col">Ngày hẹn khám</th>
 									<th scope="col">Email</th>
-									<th scope="col">Mob No</th>
-									<th scope="col">Diseases</th>
-									<th scope="col">Status</th>
-									<th scope="col">Action</th>
+									<th scope="col">Số điện thoại</th>
+									<th scope="col">Bệnh trạng</th>
+									<th scope="col">Trạng thái</th>
+									<th scope="col">Hành động</th>
 									<th scope="col">Thao tác</th>
 								</tr>
 							</thead>
@@ -85,11 +85,11 @@
 										 }
 										 %>
 									</td>
-									<td><a href="edit_patient.jsp?id=<%=ap.getId()%>"
-										class="btn btn-sm btn-primary">Edit</a> 
+									<td><a href="#?id=<%=ap.getId()%>"
+										class="btn btn-sm btn-primary">View</a> 
 										
 										<a
-										href="../deleteDoctor?id=<%=d.getId()%>"
+										href="../doctorDeleteDoctor?id=<%=ap.getId()%>"
 										class="btn btn-sm btn-danger">Delete</a></td>
 								</tr>
 								<%

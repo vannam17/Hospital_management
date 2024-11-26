@@ -18,7 +18,7 @@ response.setDateHeader("Expires", 0);
 <head>
 <meta charset="UTF-8">
 <title>User Appointment</title>
-<%@include file="../component/allcss.jsp"%>
+<%@include file="component/allcss.jsp"%>
 <style type="text/css">
 .paint-card {
 	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
@@ -26,7 +26,7 @@ response.setDateHeader("Expires", 0);
 
 .backImg {
 	background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)),
-		url("../img/hos1.jpg");
+		url("img/hos1.jpg");
 	height: 20vh;
 	width: 100%;
 	background-size: cover;
@@ -35,7 +35,7 @@ response.setDateHeader("Expires", 0);
 </style>
 </head>
 <body>
-	<%@include file="navbar.jsp"%>
+	<%@include file="component/navbar.jsp"%>
 
 	<div class="container-fulid backImg p-5">
 		<p class="text-center fs-2 text-white"></p>
@@ -43,7 +43,7 @@ response.setDateHeader("Expires", 0);
 	<div class="container p-3">
 		<div class="row">
 			<div class="col-md-6 p-5">
-				<img alt="" src="../img/doc1.jpg">
+				<img alt="" src="img/doc1.jpg">
 			</div>
 
 			<div class="col-md-6">
@@ -141,7 +141,7 @@ response.setDateHeader("Expires", 0);
 		</div>
 
 	</div>
-	<%@include file="../component/footer.jsp"%>
+	<%@include file="component/footer.jsp"%>
 
 </body>
 </html>

@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.entity.Appointment;
-import com.entity.Doctor;
 
 public class AppointmentDAO {
 
@@ -208,7 +207,6 @@ public class AppointmentDAO {
 
 		return list;
 	}
-
 	public boolean deleteAppointment(int id) {
 		boolean f = false;
 		try {
@@ -227,5 +225,6 @@ public class AppointmentDAO {
 
 		return f;
 	}
+
 
 }

@@ -51,83 +51,37 @@
 						Appointment ap = dao.getAppointmentById(id);
 						%>
 						<form class="row" action="../updateStatus" method="post">
-						    
-						    <div class="col-md-6">
-						        <label>Tên bệnh nhân</label> 
-						        <input type="text" readonly value="<%=ap.getFullName()%>" class="form-control">
-						    </div>
-						
-					
-						    <div class="col-md-6">
-						        <label>Tuổi</label> 
-						        <input type="text" readonly value="<%=ap.getAge()%>" class="form-control">
-						    </div>
-						
-						   
-						    <div class="col-md-6">
-						        <br> 
-						        <label>Số điện thoại</label> 
-						        <input type="text" readonly value="<%=ap.getPhNo()%>" class="form-control">
-						    </div>
-						
-						
-						    <div class="col-md-6">
-						        <br> 
-						        <label>Triệu chứng</label> 
-						        <input type="text" readonly value="<%=ap.getDiseases()%>" class="form-control">
-						    </div>
-						
-						  
-						    <div class="col-md-12">
-						        <br> 
-						        <label>Comment</label>
-						        <textarea required name="comm" class="form-control" rows="3"></textarea>
-						    </div>
-						
-					
-						    <div class="col-md-6">
-						        <br> 
-						        <label>Huyết áp (mmHg)</label> 
-						        <input type="text" name="bloodPressure" class="form-control" placeholder="120/80" required>
-						    </div>
-						
-						    <div class="col-md-6">
-						        <br> 
-						        <label>Cân nặng (kg)</label> 
-						        <input type="number" name="weight" class="form-control" placeholder="70" required>
-						    </div>
-						
-						    
-						    <div class="col-md-6">
-						        <br> 
-						        <label>Đường huyết (mmol/L)</label> 
-						        <input type="text" name="bloodSugar" class="form-control" placeholder="5.5" required>
-						    </div>
-						
-						   
-						    <div class="col-md-6">
-						        <br> 
-						        <label>Nhiệt độ cơ thể (°C)</label> 
-						        <input type="number" step="0.1" name="bodyTemperature" class="form-control" placeholder="36.5" required>
-						    </div>
-						
-						    
-						    <div class="col-md-12">
-						        <br> 
-						        <label>Đơn thuốc ý tế</label>
-						        <textarea name="prescription" class="form-control" rows="3" placeholder="Nhập mô tả đơn thuốc..." required></textarea>
-						    </div>
-						
-						   
-						
-						    <!-- Hidden Fields -->
-						    <input type="hidden" name="id" value="<%=ap.getId()%>"> 
-						    <input type="hidden" name="did" value="<%=ap.getDoctorId()%>">
-						
-						    <!-- Submit Button -->
-						    <button class="mt-3 btn btn-primary col-md-6 offset-md-3">Submit</button>
-						</form>
+							<div class="col-md-6">
+								<label>Patient Name</label> <input type="text" readonly
+									value="<%=ap.getFullName()%>" class="form-control">
+							</div>
 
+							<div class="col-md-6">
+								<label>Age</label> <input type="text" value="<%=ap.getAge()%>"
+									readonly class="form-control">
+							</div>
+
+
+							<div class="col-md-6">
+								<br> <label>Mob No</label> <input type="text" readonly
+									value="<%=ap.getPhNo()%>" class="form-control">
+							</div>
+
+							<div class="col-md-6">
+								<br> <label>Diseases</label> <input type="text" readonly
+									value="<%=ap.getDiseases()%>" class="form-control">
+							</div>
+
+							<div class="col-md-12">
+								<br> <label>Comment</label>
+								<textarea required name="comm" class="form-control" row="3"
+									cols=""></textarea>
+							</div>
+							<input type="hidden" name="id" value="<%=ap.getId()%>"> <input
+								type="hidden" name="did" value="<%=ap.getDoctorId()%>">
+
+							<button class=" mt-3 btn btn-primary col-md-6 offset-md-3">Submit</button>
+						</form>
 					</div>
 				</div>
 			</div>

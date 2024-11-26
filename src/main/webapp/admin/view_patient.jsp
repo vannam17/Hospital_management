@@ -57,7 +57,8 @@
                                 <tr>
                                		<th>Tuổi</th>
                                     <td><%=ap.getAge() %></td>
-                                  
+                                  	<th>Chuẩn đoán của bác sĩ</th>
+                                  	<td></td>
                                 </tr>
                                 <%
 								}
@@ -70,41 +71,6 @@
             </div>
         </div>
 
-        <!-- Lịch sử y tế -->
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <div class="card paint-card">
-                    <div class="card-body">
-                        <p class="fs-4 text-center">Lịch sử y tế</p>
-                        <table class="table table-bordered text-center">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Huyết áp</th>
-                                    <th>Cân nặng</th>
-                                    <th>Đường huyết</th>
-                                    <th>Nhiệt độ cơ thể</th>
-                                    <th>Đơn thuốc y tế</th>
-                                    <th>Ngày thăm</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>120/80 mmHg</td>
-                                    <td>42kg</td>
-                                    <td>5.8 mmol/L</td>
-                                    <td>32(độ C)</td>
-                                    <td>Thuốc giảm ho và kháng sinh</td>
-                                    <td>2024-11-20 00:03:15</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 							
 				
 </body>

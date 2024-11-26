@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.entity.Doctor;
 import com.entity.User;
 
 public class UserDao {

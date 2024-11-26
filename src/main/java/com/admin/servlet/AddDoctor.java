@@ -18,7 +18,7 @@ public class AddDoctor extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
+		  req.setCharacterEncoding("UTF-8");
 
 		try {
 
@@ -38,10 +38,10 @@ public class AddDoctor extends HttpServlet {
 			HttpSession session = req.getSession();
 
 			if (dao.registerDoctor(d)) {
-				session.setAttribute("succMsg", "Thêm bác sĩ thành công..");
+				session.setAttribute("succMsg", "Doctor Added Sucessfully..");
 				resp.sendRedirect("admin/doctor.jsp");
 			} else {
-				session.setAttribute("errorMsg", "Lỗi trên máy chủ");
+				session.setAttribute("errorMsg", "something wrong on server");
 				resp.sendRedirect("admin/doctor.jsp");
 			}
 

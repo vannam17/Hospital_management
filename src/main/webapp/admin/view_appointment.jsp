@@ -23,7 +23,7 @@
 	<div class="col-md-12">
 		<div class="card paint-card">
 			<div class="card-body">
-				<p class="fs-3 text-center">Danh sách bệnh nhân</p>
+				<p class="fs-3 text-center">Lịch đặt hẹn khám</p>
 				<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -34,16 +34,16 @@
 						</c:if>
 				<table class="table">
 					<thead>
-						<tr>
-							<th scope="col">Full Name</th>
-							<th scope="col">Gender</th>
-							<th scope="col">Age</th>
-							<th scope="col">Appointment</th>
+						<tr><th scope="col">Ngày đặt lịch</th>
+							<th scope="col">Họ và tên</th>
+							<th scope="col">Giới tính</th>
+							<th scope="col">Tuổi</th>				
 							<th scope="col">Email</th>
-							<th scope="col">Mob No</th>
-							<th scope="col">Diseases</th>
-							<th scope="col">Doctor Name</th>
-							<th scope="col">Address</th>
+							<th scope="col">Số điện thoại</th>
+							<th scope="col">Bệnh trạng</th>
+							<th scope="col">Bác sĩ</th>
+							<th scope="col">Địa chỉ</th>
+							<th scope="col">Trạng Thái</th>
 							<th scope="col">Thao tác</th>
 						</tr>
 					</thead>
@@ -55,7 +55,7 @@
 					 	if (list.isEmpty()) {
 					        %>
 					            <tr>
-					                <td colspan="10" class="text-center">Không có bệnh nhân nào</td>
+					                <td colspan="10" class="text-center">Không có lịch nào</td>
 					            </tr>
 					        <%
 					   }else {
@@ -63,19 +63,19 @@
 							Doctor d = dao2.getDoctorById(ap.getDoctorId());
 						%>
 						<tr>
-							<th><%=ap.getFullName()%></th>
+							<th><%=ap.getAppoinDate()%></th>
+							<td><%=ap.getFullName()%></td>
 							<td><%=ap.getGender()%></td>
 							<td><%=ap.getAge()%></td>
-							<td><%=ap.getAppoinDate()%></td>
 							<td><%=ap.getEmail()%></td>
 							<td><%=ap.getPhNo()%></td>
 							<td><%=ap.getDiseases()%></td>
 							<td><%=d.getFullName()%></td>
 							<td><%=ap.getAddress()%></td>
-							<!-- <td><%=ap.getStatus()%></td> -->
+							<<td><%=ap.getStatus()%></td> 
 							<td>
 								<!-- Còn cái view nữa -->
-			                    <a href="../adminDeletePatient?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+			                    <a href="../adminDeleteAppointment?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
 			                </td>
 						</tr>
 						<%

@@ -1,4 +1,4 @@
-package com.user.servlet;
+package com.admin.servlet;
 
 import java.io.IOException;
 
@@ -14,8 +14,8 @@ import com.dao.DoctorDao;
 import com.db.DBConnect;
 import com.entity.Appointment;
 
-@WebServlet("/deleteAppointment")
-public class DeleteAppointment extends HttpServlet {
+@WebServlet("/adminDeleteAppointment")
+public class AdminDeleteAppointment extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,10 +28,10 @@ public class DeleteAppointment extends HttpServlet {
 
 		if (dao.deleteAppointment(id)) {
 			session.setAttribute("succMsg", "Appointment Delete Sucessfully..");
-			resp.sendRedirect("view_appointment.jsp");
+			resp.sendRedirect("admin/view_appointment.jsp");
 		} else {
 			session.setAttribute("errorMsg", "something wrong on server");
-			resp.sendRedirect("view_appointment.jsp");
+			resp.sendRedirect("admin/view_appointment.jsp");
 		}
 		
 

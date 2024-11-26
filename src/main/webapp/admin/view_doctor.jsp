@@ -28,7 +28,7 @@
 			<div class="col-md-12">
 				<div class="card paint-card">
 					<div class="card-body">
-						<p class="fs-3 text-center">Danh sách bác sĩ</p>
+						<p class="fs-3 text-center">Doctor Details</p>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -40,13 +40,13 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th scope="col">Họ và tên</th>
-									<th scope="col">Ngày sinh</th>
-									<th scope="col">Trình độ</th>
-									<th scope="col">Chuyên khoa</th>
+									<th scope="col">Full Name</th>
+									<th scope="col">DOB</th>
+									<th scope="col">Qualification</th>
+									<th scope="col">Specialist</th>
 									<th scope="col">Email</th>
-									<th scope="col">Số điện thoại</th>
-									<th scope="col">Thao tác</th>
+									<th scope="col">Mob No</th>
+									<th scope="col">Action</th>
 								</tr>
 							</thead>
 							<tbody>
