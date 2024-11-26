@@ -18,6 +18,7 @@ public class AppointmentServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		  req.setCharacterEncoding("UTF-8");
 
 		int userId = Integer.parseInt(req.getParameter("userid"));
 		String fullname = req.getParameter("fullname");

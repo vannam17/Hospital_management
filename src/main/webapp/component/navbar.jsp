@@ -1,3 +1,4 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <%@page isELIgnored="false" %>
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
@@ -11,34 +12,34 @@
       	<c:if test="${empty userObj }">
       
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="admin_login.jsp"><i class="fa-solid fa-right-to-bracket"></i> ADMIN</a></li>
+        aria-current="page" href="admin_login.jsp"><i class="fa-solid fa-right-to-bracket"></i>QUẢN TRỊ VIÊN</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="doctor_login.jsp">DOCTOR</a></li>
+        aria-current="page" href="doctor_login.jsp">BÁC SĨ</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_appointment.jsp">APPOINTMENT</a></li>
+        aria-current="page" href="user_appointment.jsp">CUỘC HẸN KHÁM</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_login.jsp">USER</a></li>
+        aria-current="page" href="user_login.jsp">NGƯỜI DÙNG</a></li>
 
 		</c:if>
 				
 				
 		<c:if test="${not empty userObj }">
 		<li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_appointment.jsp">APPOINTMENT</a></li>
+        aria-current="page" href="user_appointment.jsp">CUỘC HẸN KHÁM</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="view_appointment.jsp">VIEW APPOINTMENT</a></li>
+        aria-current="page" href="view_appointment.jsp">XEM CUỘC HẸN KHÁM</a></li>
 		
 		<div class="dropdown">
 			<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 	             <i class="fa-solid fa-circle-user"></i> ${userObj.fullName }
 	    	</button>
 			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-			    <li><a class="dropdown-item" href="change_password.jsp">Change password</a></li>
-			    <li><a class="dropdown-item" href="userLogout">Logout</a></li>
+			    <li><a class="dropdown-item" href="change_password.jsp">Thay đổi mật khẩu</a></li>
+			    <li><a class="dropdown-item" href="userLogout">Đăng xuất</a></li>
 			  </ul>
 		</div>
 		
