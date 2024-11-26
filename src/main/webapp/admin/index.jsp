@@ -82,24 +82,6 @@
 
 		<div class="col-md-4 mt-4">
 				<div class="card paint-card">
-<<<<<<< HEAD
-					<div class="card-body text-rightr text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #f5b3c7 27%, #95eb95 94%);">
-						<i class="fas fa-user-circle fa-3x"></i>
-						<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
-							Tổng người dùng <br><%=dao.countUSer() %>
-						</p>
-					</div>
-				</div>
-			</div>
-		<div class="col-md-4 mt-4">
-				<div class="card paint-card">
-					<div class="card-body text-rightr text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #01cb75 27%, #9cb8ed 94%);">
-						<i class="fas fa-user-circle fa-3x"></i>
-						<p class="fs-4 text-center ms-auto  mb-0 fw-bold">
-							Tổng bệnh nhân <br><%=dao.countPatient() %>
-						</p>
-					</div>
-=======
 					<a href="patient.jsp" class="text-white text-decoration-none">
 						<div class="card-body text-rightr text-white d-flex align-items-center justify-content-center" style="background: linear-gradient(to left, #01cb75 27%, #9cb8ed 94%);">
 							<i class="fas fa-user-circle fa-3x"></i>
@@ -108,7 +90,6 @@
 							</p>
 						</div>
 					</a>
->>>>>>> Loan
 				</div>
 			</div>
 			<div class="col-md-4 mt-4">
