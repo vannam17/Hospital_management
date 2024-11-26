@@ -46,49 +46,78 @@
 					<div class="card-body">
 						<p class="fs-4 fw-bold text-center text-success">Appointment
 							List</p>
+						<c:if test="${not empty errorMsg}">
+							<p class="fs-4 text-center text-danger">${errorMsg}</p>
+							<c:remove var="errorMsg" scope="session" />
+						</c:if>
+						<c:if test="${not empty succMsg}">
+							<p class=" fs-4 text-center text-success">${succMsg}</p>
+							<c:remove var="succMsg" scope="session" />
+						</c:if>
 						<table class="table">
-							<thead>
-								<tr>
-									<th scope="col">Full Name</th>
-									<th scope="col">Gender</th>
-									<th scope="col">Age</th>
-									<th scope="col">Appoint Date</th>
-									<th scope="col">Diseases</th>
-									<th scope="col">Doctor Name</th>
-									<th scope="col">Status</th>
-								</tr>
-							</thead>
-							<tbody>
-								<%
-								User user = (User) session.getAttribute("userObj");
-								AppointmentDAO dao = new AppointmentDAO(DBConnect.getConn());
-								DoctorDao dao2 = new DoctorDao(DBConnect.getConn());
-								List<Appointment> list = dao.getAllAppointmentByLoginUser(user.getId());
-								for (Appointment ap : list) {
-									Doctor d = dao2.getDoctorById(ap.getDoctorId());
-								%>
-								<tr>
-									<th><%=ap.getFullName()%></th>
-									<td><%=ap.getGender()%></td>
-									<td><%=ap.getAge()%></td>
-									<td><%=ap.getAppoinDate()%></td>
-									<td><%=ap.getDiseases()%></td>
-									<td><%=d.getFullName()%></td>
-									<td>
-										<%
-										if ("Pending".equals(ap.getStatus())) {
-										%> <a href="#" class="btn btn-sm btn-warning">Pending</a> <%
-                                        } else {
-                                        %> <%=ap.getStatus()%> <%
-                                        }
-                                        %>
-									</td>
-								</tr>
-								<%
-								}
-								%>
-							</tbody>
+						    <thead>
+						        <tr>
+						            <th scope="col">Full Name</th>
+						            <th scope="col">Gender</th>
+						            <th scope="col">Age</th>
+						            <th scope="col">Appoint Date</th>
+						            <th scope="col">Diseases</th>
+						            <th scope="col">Doctor Name</th>
+						            <th scope="col">Trạng thái</th>
+						            <th scope="col">Thao tác</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <%
+						        User user = (User) session.getAttribute("userObj");
+						        AppointmentDAO dao = new AppointmentDAO(DBConnect.getConn());
+						        DoctorDao dao2 = new DoctorDao(DBConnect.getConn());
+						        List<Appointment> list = dao.getAllAppointmentByLoginUser(user.getId());
+						
+						        if (list.isEmpty()) {
+						        %>
+						            <tr>
+						                <td colspan="8" class="text-center">Không có lịch nào đã đặt</td>
+						            </tr>
+						        <%
+						        } else {
+						            for (Appointment ap : list) {
+						                Doctor d = dao2.getDoctorById(ap.getDoctorId());
+						        %>
+						                <tr>
+						                    <td><%= ap.getFullName() %></td>
+						                    <td><%= ap.getGender() %></td>
+						                    <td><%= ap.getAge() %></td>
+						                    <td><%= ap.getAppoinDate() %></td>
+						                    <td><%= ap.getDiseases() %></td>
+						                    <td><%= d.getFullName() %></td>
+						                    <td>
+						                        <%
+												if ("Pending".equals(ap.getStatus())) {
+												%> 
+												<span class="btn btn-success btn-sm disabled"style="width:100px">Chưa duyệt</span> 
+												 <%
+												 } else {
+												 %> 
+												 <span class="btn btn-success btn-sm disabled"style="width:100px">Đã duyệt</span> 
+												 <%
+												 }
+												 %>
+						                    </td>
+						                    <td>
+						                    <a href="view_patient.jsp?id=<%=ap.getId()%>"
+										class="btn btn-sm btn-primary">View</a>
+						                        <a href="deleteAppointment?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
+						                    </td>
+						                </tr>
+						        <%
+						            }
+						        }
+						        %>
+						    </tbody>
 						</table>
+
+						
 
 					</div>
 				</div>

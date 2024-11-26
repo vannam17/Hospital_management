@@ -1,5 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <%@page isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.jsp"><i class="fa-solid fa-house-chimney-medical"></i> HOSPITAL</a>
@@ -14,23 +16,23 @@
         aria-current="page" href="admin_login.jsp"><i class="fa-solid fa-right-to-bracket"></i> ADMIN</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="doctor_login.jsp">DOCTOR</a></li>
+        aria-current="page" href="doctor_login.jsp">BÁC SĨ</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_appointment.jsp">APPOINTMENT</a></li>
+        aria-current="page" href="user_appointment.jsp">ĐẶT LỊCH HẸN KHÁM</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_login.jsp">USER</a></li>
+        aria-current="page" href="user_login.jsp">NGƯỜI DÙNG</a></li>
 
 		</c:if>
 				
 				
 		<c:if test="${not empty userObj }">
 		<li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="user_appointment.jsp">APPOINTMENT</a></li>
+        aria-current="page" href="user_appointment.jsp">ĐẶT LỊCH HẸN KHÁM</a></li>
         
         <li class="nav-item"><a class="nav-link active" 
-        aria-current="page" href="view_appointment.jsp">VIEW APPOINTMENT</a></li>
+        aria-current="page" href="view_appointment.jsp">XEM LỊCH</a></li>
 		
 		<div class="dropdown">
 			<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

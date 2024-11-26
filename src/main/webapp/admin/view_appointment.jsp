@@ -23,7 +23,7 @@
 	<div class="col-md-12">
 		<div class="card paint-card">
 			<div class="card-body">
-				<p class="fs-3 text-center">Danh sách bệnh nhân</p>
+				<p class="fs-3 text-center">Danh sách lịch hẹn</p>
 				<c:if test="${not empty errorMsg}">
 							<p class="fs-3 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -35,15 +35,15 @@
 				<table class="table">
 					<thead>
 						<tr>
+							<th scope="col">Ngày hẹn khám</th>
 							<th scope="col">Họ và tên</th>
 							<th scope="col">Giới tính</th>
-							<th scope="col">Tuổi</th>
-							<th scope="col">Ngày hẹn khám</th>
+							<th scope="col">Tuổi</th>					
 							<th scope="col">Email</th>
-							<th scope="col">Số điện thoại</th>
+							<th scope="col">Số điện thoại liên hệ</th>
 							
 							<th scope="col">Bác sĩ</th>
-							
+						
 							<th scope="col">Thao tác</th>
 						</tr>
 					</thead>
@@ -55,7 +55,7 @@
 					 	if (list.isEmpty()) {
 					        %>
 					            <tr>
-					                <td colspan="10" class="text-center">Không có bệnh nhân nào</td>
+					                <td colspan="10" class="text-center">Không có lịch nào</td>
 					            </tr>
 					        <%
 					   }else {
@@ -63,10 +63,10 @@
 							Doctor d = dao2.getDoctorById(ap.getDoctorId());
 						%>
 						<tr>
+						<th><%=ap.getAppoinDate()%></th>
 							<th><%=ap.getFullName()%></th>
 							<td><%=ap.getGender()%></td>
-							<td><%=ap.getAge()%></td>
-							<td><%=ap.getAppoinDate()%></td>
+							<td><%=ap.getAge()%></td>							
 							<td><%=ap.getEmail()%></td>
 							<td><%=ap.getPhNo()%></td>
 							
@@ -74,9 +74,8 @@
 							
 							<!-- <td><%=ap.getStatus()%></td> -->
 							<td>
-								
 								<a href="view_patient.jsp?id=<%=ap.getId()%>"
-										class="btn btn-sm btn-primary">View</a> 
+										class="btn btn-sm btn-primary">View</a>
 			                    <a href="../adminDeletePatient?id=<%= ap.getId() %>" class="btn btn-sm btn-danger">Delete</a>
 			                </td>
 						</tr>
