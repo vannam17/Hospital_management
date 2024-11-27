@@ -36,3 +36,38 @@ Trong Dự án này, chúng tôi hướng đến giải quyết các vấn đề
   \hospital\src\main\java\com\db\DBConnect.java
 5. **Chạy ứng dụng:** Sử dụng IDE (như IntelliJ IDEA hoặc Eclipse) để mở dự án và chạy ứng dụng web này trên máy chủ Tomcat của mình - phiên bản 9.0 là tốt nhất.
 
+## Ảnh chụp màn hình
+
+**1. Trang chủ**
+
+![Trang chủ](https://github.com/Thenaveen-hub/Medical/assets/140473308/2c0676ab-b466-4b89-bf6c-a7d230985ade)
+
+**2. Đăng nhập người dùng**
+
+![Ảnh chụp màn hình (90)](https://github.com/Thenaveen-hub/Medical/assets/140473308/68c87eb2-f806-44fb-a0c4-794aa8365da7)
+
+**3. Giới thiệu về chúng tôi**
+
+![Giới thiệu](https://github.com/Thenaveen-hub/Medical/assets/140473308/b8101938-ce29-4529-8962-2b0a7e57d023)
+
+**4. Trang chủ người dùng**
+
+![Ảnh chụp màn hình (91)](https://github.com/Thenaveen-hub/Medical/assets/140473308/bb24e7b5-2fb9-4321-8a43-5579ebb50ec1)
+
+**5. Trang đặt lịch hẹn**
+
+![Đặt lịch hẹn](https://github.com/Thenaveen-hub/Medical/assets/140473308/7d589a40-d968-48b9-995d-ec5c0d421ee7)
+
+**6. Lịch sử các cuộc hẹn trước**
+
+![Lịch sử hẹn](https://github.com/Thenaveen-hub/Medical/assets/140473308/fba115fe-1df0-4d26-83f0-1816f20538c3)
+
+**7. Trang chi tiết bệnh nhân**
+
+![Ảnh chụp màn hình (96)](https://github.com/Thenaveen-hub/Medical/assets/140473308/461cd4be-60fb-482a-9e5a-cc33112de5dd)
+
+---
+
+**Nếu có bất kỳ thắc mắc nào, vui lòng gửi email cho tôi tại hellonaveen21@gmail.com**
+
+### Cảm ơn bạn!
