@@ -20,6 +20,8 @@ public class EditProfile extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		try {
+			req.setCharacterEncoding("UTF-8"); // Đảm bảo yêu cầu (request) sử dụng UTF-8
+			resp.setContentType("text/html; charset=UTF-8");
 
 			String fullName = req.getParameter("fullname");
 			String dob = req.getParameter("dob");
@@ -37,7 +39,7 @@ public class EditProfile extends HttpServlet {
 
 			if (dao.editDoctorProfile(d)) {
 				Doctor updateDoctor = dao.getDoctorById(id);
-				session.setAttribute("succMsgd", "Cập nhật thông tin thành công..");
+				session.setAttribute("succMsgd", "Cập nhật thông tin thành công.");
 				session.setAttribute("doctObj", updateDoctor);
 				resp.sendRedirect("doctor/edit_profile.jsp");
 			} else {

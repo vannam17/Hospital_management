@@ -16,7 +16,7 @@
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 				<li class="nav-item"><a class="nav-link active" href="index.jsp">TRANG CHỦ</a></li>
-				<li class="nav-item"><a class="nav-link active" href="doctor.jsp">BÁC SĨ</a></li>
+				<li class="nav-item"><a class="nav-link active" href="doctor.jsp">THÊM BÁC SĨ</a></li>
 				<li class="nav-item"><a class="nav-link active" href="view_doctor.jsp">XEM BÁC SĨ</a></li>
 				<li class="nav-item"><a class="nav-link active" href="patient.jsp">BỆNH NHÂN</a></li>
 
