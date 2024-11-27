@@ -40,7 +40,25 @@ public class DoctorDao {
 
 		return f;
 	}
+	public boolean checkEmail(String email) {
+	    boolean exists = false;
 
+	    try {
+	        String query = "select * from doctor where email = ?";
+	        PreparedStatement ps = conn.prepareStatement(query);
+	        ps.setString(1, email);
+	        ResultSet rs = ps.executeQuery();
+
+	        if (rs.next()) {
+	            exists = true;
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return exists;
+	}
+	
 	public List<Doctor> getAllDoctor() {
 		List<Doctor> list = new ArrayList<Doctor>();
 		Doctor d = null;
@@ -97,7 +115,26 @@ public class DoctorDao {
 		}
 		return d;
 	}
+	public Doctor getDoctorNameById(int id) {
 
+		Doctor d = null;
+		try {
+
+			String sql = "select full_name from doctor where id=?";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				d = new Doctor();
+				d.setFullName(rs.getString(1));			
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return d;
+	}
 	public boolean updateDoctor(Doctor d) {
 		boolean f = false;
 

@@ -1,5 +1,7 @@
 <%@page import="com.db.DBConnect"%>
 <%@page import="com.dao.DoctorDao"%>
+<%@page import="com.dao.UserDao"%>
+<%@page import="com.entity.User"%>
 <%
 response.setHeader("Cache-Control", "no-cache");
 response.setHeader("Cache-Control", "no-store");
@@ -51,13 +53,14 @@ response.setDateHeader("Expires", 0);
 							<p class=" fs-4 text-center text-success">${succMsg}</p>
 							<c:remove var="succMsg" scope="session" />
 						</c:if>
+						
 						<form class="row g-3" action="appAppointment" method="post">
 
 							<input type="hidden" name="userid" value="${userObj.id }">
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Họ và tên</label> <input
-									required type="text" class="form-control" name="fullname">
+									required type="text" class="form-control" name="fullname" value="${userObj.fullName }" readonly>
 							</div>
 
 							<div class="col-md-6">
@@ -81,7 +84,7 @@ response.setDateHeader("Expires", 0);
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Email</label> <input
-									required type="email" class="form-control" name="email">
+									required type="email" class="form-control" name="email" value="${userObj.email }" readonly>
 							</div>
 
 							<div class="col-md-6">

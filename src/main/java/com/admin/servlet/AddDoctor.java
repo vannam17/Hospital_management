@@ -37,14 +37,21 @@ public class AddDoctor extends HttpServlet {
 			DoctorDao dao = new DoctorDao(DBConnect.getConn());
 			HttpSession session = req.getSession();
 
-			if (dao.registerDoctor(d)) {
-				session.setAttribute("succMsg", "Thêm bác sĩ thành công..");
-				resp.sendRedirect("admin/doctor.jsp");
-			} else {
-				session.setAttribute("errorMsg", "Thêm không thành công");
-				resp.sendRedirect("admin/doctor.jsp");
-			}
-
+			if (dao.checkEmail(email)) {
+                session.setAttribute("errorMsg", "Email đã được sử dụng. Vui lòng sử dụng email khác.");
+                resp.sendRedirect("admin/doctor.jsp");
+            } else {
+              
+                if (dao.registerDoctor(d)) {
+                    session.setAttribute("sucMsg", "Thêm bác sĩ thành công..");
+                    resp.sendRedirect("admin/doctor.jsp");
+                } else {
+                    session.setAttribute("errorMsg", "Thêm không thành công");
+                    resp.sendRedirect("admin/doctor.jsp");
+                }
+            }
+			
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
