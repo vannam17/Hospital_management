@@ -39,6 +39,10 @@ response.setDateHeader("Expires", 0);
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="text-center fs-3">Đặt lịch hẹn khám</p>
+						<c:if test="${empty userObj }">
+								<a href="user_login.jsp" class="d-flex justify-content-center title btn-danger border border-warning m-3 p-2">* Vui lòng đăng nhập để đặt lịch hẹn *</a>
+			
+							</c:if>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-4 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
