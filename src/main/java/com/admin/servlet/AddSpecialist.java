@@ -23,17 +23,23 @@ public class AddSpecialist extends HttpServlet {
 		String specName = req.getParameter("specName");
 
 		SpecialistDao dao = new SpecialistDao(DBConnect.getConn());
-		boolean f = dao.addSpecialist(specName);
-
+		
 		HttpSession session = req.getSession();
+		
+		if (dao.checkSpecialist(specName)) {
+            session.setAttribute("errorMsg", "Chuyên khoa đã tồn tại.");
+            resp.sendRedirect("admin/index.jsp");
+        } else {  
+        	boolean f = dao.addSpecialist(specName);
 
-		if (f) {
-			session.setAttribute("succMsg", "Thêm chuyên khoa thành công..");
-			resp.sendRedirect("admin/index.jsp");
-		} else {
-			session.setAttribute("errorMsg", "Thêm không thành công");
-			resp.sendRedirect("admin/index.jsp");
-		}
+        	if (f) {
+    			session.setAttribute("succMsg", "Thêm chuyên khoa thành công..");
+    			resp.sendRedirect("admin/index.jsp");
+    		} else {
+    			session.setAttribute("errorMsg", "Thêm không thành công");
+    			resp.sendRedirect("admin/index.jsp");
+    		}
+        }
 
 	}
 

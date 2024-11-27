@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.entity.Doctor;
 import com.entity.User;
 
 public class UserDao {
@@ -40,7 +41,7 @@ public class UserDao {
 
 		return f;
 	}
-	
+
 	
 	public User login(String em, String psw) {
 		User u = null;
@@ -67,6 +68,26 @@ public class UserDao {
 
 		return u;
 	}
+	public boolean checkEmail(String email) {
+	    boolean exists = false;
+
+	    try {
+	        String query = "select * from user_dtls where email = ?";
+	        PreparedStatement ps = conn.prepareStatement(query);
+	        ps.setString(1, email);
+	        ResultSet rs = ps.executeQuery();
+
+	        if (rs.next()) {
+	            exists = true;
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return exists;
+	}
+
+	
 	public boolean checkOldPassword(int userid, String oldPassword) {
 		boolean f = false;
 

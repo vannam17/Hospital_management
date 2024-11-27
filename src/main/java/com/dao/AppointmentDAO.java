@@ -47,7 +47,25 @@ public class AppointmentDAO {
 
 		return f;
 	}
+	public boolean checkDate(String appoinDate) {
+	    boolean exists = false;
 
+	    try {
+	        String query = "select * from appointment where appoint_date = ?";
+	        PreparedStatement ps = conn.prepareStatement(query);
+	        ps.setString(1, appoinDate);
+	        ResultSet rs = ps.executeQuery();
+
+	        if (rs.next()) {
+	            exists = true;
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return exists;
+	}
+	
 	public List<Appointment> getAllAppointmentByLoginUser(int userId) {
 		List<Appointment> list = new ArrayList<Appointment>();
 		Appointment ap = null;

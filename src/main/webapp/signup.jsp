@@ -51,7 +51,7 @@
 							</div>
 							<button type="submit" class="btn bg-success text-white col-md-12">Đăng ký</button>
 						</form>
-						<br> Bạn đã có tài khoản <a href="user_login.jsp"
+						<br> Bạn đã có tài khoản? <a href="user_login.jsp"
 													   class="text-decoration-none"> Đăng Nhập</a>
 					</div>
 				</div>

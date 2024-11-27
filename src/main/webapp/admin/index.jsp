@@ -41,7 +41,7 @@
 	</c:if>
 	
 	<div class="container p-5">
-		<p class="text-center fs-3 text-success">Thống kê</p>
+		
 		<c:if test="${not empty errorMsg}">
 			<p class="fs-3 text-center text-danger">${errorMsg}</p>
 			<c:remove var="errorMsg" scope="session" />

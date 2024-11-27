@@ -43,6 +43,8 @@
                             AppointmentDAO dao2 = new AppointmentDAO(DBConnect.getConn());
                             Appointment	 d = dao2.getAppointmentById(id);
 						
+                            DoctorDao dao = new DoctorDao(DBConnect.getConn());
+							Doctor d1 = dao.getDoctorNameById(d.getDoctorId());
 								%>
                                 <tr>
                                     <th>Tên bệnh nhân</th>
@@ -65,8 +67,8 @@
                                  <tr>
                                		<th>Tuổi</th>
                                     <td><%=d.getAge() %></td>
-                                  	<th>Mã bác sĩ điều trị</th>
-                                  	<td><%=d.getDoctorId() %></td>
+                                    <th>Bác sĩ điều trị</th>
+                                  	<td><%=d1.getFullName() %></td>
                                 </tr>
                                 <tr >
                                 <th>Chuẩn đoán của bác sĩ</th>

@@ -45,7 +45,7 @@
 	  </div>
 	</div>
 	
-	<p class="text-center fs-3 mt-3 mb-0">Thống kê</p>
+
 	
 	<div class="container p-5">
 		<div class="row">
