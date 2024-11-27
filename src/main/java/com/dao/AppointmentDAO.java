@@ -47,25 +47,7 @@ public class AppointmentDAO {
 
 		return f;
 	}
-	public boolean checkDate(String appoinDate) {
-	    boolean exists = false;
 
-	    try {
-	        String query = "select * from appointment where appoint_date = ?";
-	        PreparedStatement ps = conn.prepareStatement(query);
-	        ps.setString(1, appoinDate);
-	        ResultSet rs = ps.executeQuery();
-
-	        if (rs.next()) {
-	            exists = true;
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
-
-	    return exists;
-	}
-	
 	public List<Appointment> getAllAppointmentByLoginUser(int userId) {
 		List<Appointment> list = new ArrayList<Appointment>();
 		Appointment ap = null;
@@ -100,7 +82,6 @@ public class AppointmentDAO {
 
 		return list;
 	}
-
 	public List<Appointment> getAllAppointmentByDoctorLogin(int doctorId) {
 		List<Appointment> list = new ArrayList<Appointment>();
 		Appointment ap = null;
@@ -134,6 +115,25 @@ public class AppointmentDAO {
 		}
 
 		return list;
+	}
+	public boolean checkDate(String appoinDate,String email) {
+		boolean exists = false;
+
+		try {
+			String query = "select * from appointment where appoint_date = ?AND email = ?";
+			PreparedStatement ps = conn.prepareStatement(query);
+			ps.setString(1, appoinDate);
+			ps.setString(2, email);
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				exists = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return exists;
 	}
 
 	public Appointment getAppointmentById(int id) {

@@ -30,19 +30,24 @@ response.setDateHeader("Expires", 0);
 <body>
 	<%@include file="component/navbar.jsp"%>
 
-	
+
 	<div class="container p-3">
 		<div class="row">
-			
+
 
 			<div class="col-md-8">
 				<div class="card paint-card">
 					<div class="card-body">
 						<p class="text-center fs-3">Đặt lịch hẹn khám</p>
 						<c:if test="${empty userObj }">
-								<a href="user_login.jsp" class="d-flex justify-content-center title btn-danger border border-warning m-3 p-2">* Vui lòng đăng nhập để đặt lịch hẹn *</a>
-			
-							</c:if>
+							<a href="user_login.jsp"
+							   class="d-flex justify-content-center title btn-danger border border-warning m-3 p-2"
+							   style="text-decoration: none;">
+								Vui lòng đăng nhập để đặt lịch hẹn
+							</a>
+
+
+						</c:if>
 						<c:if test="${not empty errorMsg}">
 							<p class="fs-4 text-center text-danger">${errorMsg}</p>
 							<c:remove var="errorMsg" scope="session" />
@@ -56,40 +61,36 @@ response.setDateHeader("Expires", 0);
 							<input type="hidden" name="userid" value="${userObj.id }">
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Họ và tên</label> <input
-									required type="text" class="form-control" name="fullname">
+								<%--@declare id="inputemail4"--%><label for="inputEmail4" class="form-label">Họ và tên</label> <input
+									required type="text" class="form-control" name="fullname" value="${userObj.fullName }" readonly>
 							</div>
 
 							<div class="col-md-6">
-								<label>Giới tính</label> <select class="form-control" name="gender"
-									required>
-									<option value="Nam">Nam</option>
-									<option value="Nữ">Nữ</option>
-								</select>
+								<label for="inputEmail4" class="form-label">Giới tính</label>
+								<input type="text" class="form-control" name="gender" value="${userObj.gender}" readonly>
 							</div>
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Tuổi</label> <input
-									required type="number" class="form-control" name="age">
+									required type="number" class="form-control" name="age" value="${userObj.age }" readonly>
 							</div>
 
 							<div class="col-md-6">
-								<label for="inputEmail4" class="form-label">Ngày hẹn khám</label> 
+								<label for="inputEmail4" class="form-label">Ngày hẹn khám</label>
 								<input type="date" class="form-control" required
 									name="appoint_date">
 							</div>
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Email</label> <input
-									required type="email" class="form-control" name="email">
+									required type="email" class="form-control" name="email" value="${userObj.email }" readonly>
 							</div>
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Số điện thoại</label> <input
 									maxlength="10" required type="number" class="form-control"
-									name="phno">
+									name="phno" value="${userObj.phoneNumber}" readonly>
 							</div>
-
 
 							<div class="col-md-6">
 								<label for="inputEmail4" class="form-label">Bệnh án</label> <input
@@ -97,7 +98,7 @@ response.setDateHeader("Expires", 0);
 							</div>
 
 							<div class="col-md-6">
-								<label for="inputPassword4" class="form-label">Bác sĩ</label> <select
+								<%--@declare id="inputpassword4"--%><label for="inputPassword4" class="form-label">Bác sĩ</label> <select
 									required class="form-control" name="doct">
 									<option value="">--chọn bác sĩ điều trị--</option>
 
@@ -115,11 +116,9 @@ response.setDateHeader("Expires", 0);
 							</div>
 
 							<div class="col-md-12">
-								<label>Địa chỉ</label>
-								<textarea required name="address" class="form-control" rows="3"
-									cols=""></textarea>
+								<label for="inputEmail4" class="form-label">Địa chỉ</label>
+								<input required type="text" class="form-control" name="address" value="${userObj.address}" readonly>
 							</div>
-
 							<c:if test="${empty userObj }">
 								<a href="user_login.jsp" class="col-md-6 offset-md-3 btn btn-success">Đặt lịch</a>
 							</c:if>

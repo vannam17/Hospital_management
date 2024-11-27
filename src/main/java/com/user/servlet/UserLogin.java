@@ -30,7 +30,7 @@ public class UserLogin extends HttpServlet {
 			session.setAttribute("userObj", user);
 			resp.sendRedirect("index.jsp");
 		} else {
-			session.setAttribute("errorMsg", "email hoặc mật khẩu không đúng");
+			session.setAttribute("errorMsg", "Email hoặc mật khẩu không đúng");
 			resp.sendRedirect("user_login.jsp");
 		}
 

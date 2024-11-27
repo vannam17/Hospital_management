@@ -18,7 +18,7 @@ public class AddDoctor extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		  req.setCharacterEncoding("UTF-8");
+		req.setCharacterEncoding("UTF-8");
 
 		try {
 
@@ -38,20 +38,20 @@ public class AddDoctor extends HttpServlet {
 			HttpSession session = req.getSession();
 
 			if (dao.checkEmail(email)) {
-                session.setAttribute("errorMsg", "Email đã được sử dụng. Vui lòng sử dụng email khác.");
-                resp.sendRedirect("admin/doctor.jsp");
-            } else {
-              
-                if (dao.registerDoctor(d)) {
-                    session.setAttribute("sucMsg", "Thêm bác sĩ thành công..");
-                    resp.sendRedirect("admin/doctor.jsp");
-                } else {
-                    session.setAttribute("errorMsg", "Thêm không thành công");
-                    resp.sendRedirect("admin/doctor.jsp");
-                }
-            }
-			
-			
+				session.setAttribute("errorMsg", "Email đã được sử dụng. Vui lòng sử dụng email khác.");
+				resp.sendRedirect("admin/doctor.jsp");
+			} else {
+
+				if (dao.registerDoctor(d)) {
+					session.setAttribute("sucMsg", "Thêm bác sĩ thành công..");
+					resp.sendRedirect("admin/doctor.jsp");
+				} else {
+					session.setAttribute("errorMsg", "Thêm không thành công");
+					resp.sendRedirect("admin/doctor.jsp");
+				}
+			}
+
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -36,22 +36,22 @@ public class SpecialistDao {
 		return f;
 	}
 	public boolean checkSpecialist(String specialist) {
-	    boolean exists = false;
+		boolean exists = false;
 
-	    try {
-	        String query = "select * from specialist where spec_name = ?";
-	        PreparedStatement ps = conn.prepareStatement(query);
-	        ps.setString(1, specialist);
-	        ResultSet rs = ps.executeQuery();
+		try {
+			String query = "select * from specialist where spec_name = ?";
+			PreparedStatement ps = conn.prepareStatement(query);
+			ps.setString(1, specialist);
+			ResultSet rs = ps.executeQuery();
 
-	        if (rs.next()) {
-	            exists = true;
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
+			if (rs.next()) {
+				exists = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-	    return exists;
+		return exists;
 	}
 	public List<Specalist> getAllSpecialist() {
 		List<Specalist> list = new ArrayList<Specalist>();

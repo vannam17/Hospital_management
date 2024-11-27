@@ -53,14 +53,32 @@
 									<td><%=d.getFullName()%></td>
 									<td><%=d.getEmail()%></td>
 									<td>
-										<a
-										href="../deleteUser?id=<%=d.getId()%>"
-										class="btn btn-sm btn-danger">Xóa</a></td>
+									<button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<%=d.getId()%>">
+										Xóa
+									</button>
+									</td>
 								</tr>
-								<%
-								}
-								%>
 
+							<!-- Modal Xác nhận Xóa -->
+							<div class="modal fade" id="deleteModal<%=d.getId()%>" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											Bạn có chắc chắn muốn xóa người dùng"<%=d.getFullName()%>" không?
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+											<a href="../deleteUser?id=<%=d.getId()%>" class="btn btn-primary">Xóa</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<%
+								}%>
 							</tbody>
 						</table>
 

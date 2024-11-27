@@ -18,28 +18,28 @@ public class AddSpecialist extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		  req.setCharacterEncoding("UTF-8");
+		req.setCharacterEncoding("UTF-8");
 
 		String specName = req.getParameter("specName");
 
 		SpecialistDao dao = new SpecialistDao(DBConnect.getConn());
-		
-		HttpSession session = req.getSession();
-		
-		if (dao.checkSpecialist(specName)) {
-            session.setAttribute("errorMsg", "Chuyên khoa đã tồn tại.");
-            resp.sendRedirect("admin/index.jsp");
-        } else {  
-        	boolean f = dao.addSpecialist(specName);
 
-        	if (f) {
-    			session.setAttribute("succMsg", "Thêm chuyên khoa thành công..");
-    			resp.sendRedirect("admin/index.jsp");
-    		} else {
-    			session.setAttribute("errorMsg", "Thêm không thành công");
-    			resp.sendRedirect("admin/index.jsp");
-    		}
-        }
+		HttpSession session = req.getSession();
+
+		if (dao.checkSpecialist(specName)) {
+			session.setAttribute("errorMsg", "Chuyên khoa đã tồn tại.");
+			resp.sendRedirect("admin/index.jsp");
+		} else {
+			boolean f = dao.addSpecialist(specName);
+
+			if (f) {
+				session.setAttribute("succMsg", "Thêm chuyên khoa thành công..");
+				resp.sendRedirect("admin/index.jsp");
+			} else {
+				session.setAttribute("errorMsg", "Thêm không thành công");
+				resp.sendRedirect("admin/index.jsp");
+			}
+		}
 
 	}
 

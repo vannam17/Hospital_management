@@ -41,24 +41,23 @@ public class DoctorDao {
 		return f;
 	}
 	public boolean checkEmail(String email) {
-	    boolean exists = false;
+		boolean exists = false;
 
-	    try {
-	        String query = "select * from doctor where email = ?";
-	        PreparedStatement ps = conn.prepareStatement(query);
-	        ps.setString(1, email);
-	        ResultSet rs = ps.executeQuery();
+		try {
+			String query = "select * from doctor where email = ?";
+			PreparedStatement ps = conn.prepareStatement(query);
+			ps.setString(1, email);
+			ResultSet rs = ps.executeQuery();
 
-	        if (rs.next()) {
-	            exists = true;
-	        }
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	    }
+			if (rs.next()) {
+				exists = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
-	    return exists;
+		return exists;
 	}
-	
 	public List<Doctor> getAllDoctor() {
 		List<Doctor> list = new ArrayList<Doctor>();
 		Doctor d = null;
@@ -127,7 +126,7 @@ public class DoctorDao {
 
 			while (rs.next()) {
 				d = new Doctor();
-				d.setFullName(rs.getString(1));			
+				d.setFullName(rs.getString(1));
 			}
 
 		} catch (Exception e) {
