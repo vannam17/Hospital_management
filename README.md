@@ -40,34 +40,46 @@ Trong Dự án này, chúng tôi hướng đến giải quyết các vấn đề
 
 **1. Trang chủ**
 
-![Trang chủ](https://github.com/Thenaveen-hub/Medical/assets/140473308/2c0676ab-b466-4b89-bf6c-a7d230985ade)
+![Trang chủ](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/home.png)
 
 **2. Đăng nhập người dùng**
 
-![Ảnh chụp màn hình (90)](https://github.com/Thenaveen-hub/Medical/assets/140473308/68c87eb2-f806-44fb-a0c4-794aa8365da7)
+![Đăng nhập](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/signin.png)
 
-**3. Giới thiệu về chúng tôi**
+**3. Đăng ký người dùng**
 
-![Giới thiệu](https://github.com/Thenaveen-hub/Medical/assets/140473308/b8101938-ce29-4529-8962-2b0a7e57d023)
+![Đăng ký](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/signup.png)
 
-**4. Trang chủ người dùng**
+**4. Trang đặt lịch hẹn**
 
-![Ảnh chụp màn hình (91)](https://github.com/Thenaveen-hub/Medical/assets/140473308/bb24e7b5-2fb9-4321-8a43-5579ebb50ec1)
+![Đặt lịch hẹn](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/dat_lich_kham.png)
 
-**5. Trang đặt lịch hẹn**
+**5. Lịch sử các cuộc hẹn trước**
 
-![Đặt lịch hẹn](https://github.com/Thenaveen-hub/Medical/assets/140473308/7d589a40-d968-48b9-995d-ec5c0d421ee7)
+![Lịch sử hẹn](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/xem_lich_kham.png)
 
-**6. Lịch sử các cuộc hẹn trước**
+**6. Trang chi tiết bệnh nhân**
 
-![Lịch sử hẹn](https://github.com/Thenaveen-hub/Medical/assets/140473308/fba115fe-1df0-4d26-83f0-1816f20538c3)
+![Ảnh chụp màn hình (96)]()
 
-**7. Trang chi tiết bệnh nhân**
+**7. Trang chủ bác sĩ**
 
-![Ảnh chụp màn hình (96)](https://github.com/Thenaveen-hub/Medical/assets/140473308/461cd4be-60fb-482a-9e5a-cc33112de5dd)
+![Trang bác sĩ](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/Trang_bs.png)
 
+**8. Trang thay đổi hồ sơ cá nhân**
+
+![thay đổi hồ sơ](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/trang_thay_doi_ho_so_ca_nhan.png)
+
+**9. Trang quản trị viên**
+
+![Trang quản trị viên](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/trang_admin.png)
+
+**10. Trang quản lý bệnh nhân**
+
+![Trang quảnlý bệnh nhân](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/ql_bn.png)
+
+**11. Trang quản lý bác sĩ**
+
+![Trang quản lý bác sĩ ](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/ql_bs.png)
 ---
-
-**Nếu có bất kỳ thắc mắc nào, vui lòng gửi email cho tôi tại hellonaveen21@gmail.com**
-
 ### Cảm ơn bạn!
