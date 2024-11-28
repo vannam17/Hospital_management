@@ -60,7 +60,7 @@ Trong Dự án này, chúng tôi hướng đến giải quyết các vấn đề
 
 **6. Trang chi tiết bệnh nhân**
 
-![Ảnh chụp màn hình (96)]()
+![chi tiết bệnh nhân](https://github.com/vannam17/Hospital_management/blob/main/src/main/webapp/img/xem_chi_tiet.png)
 
 **7. Trang chủ bác sĩ**
 
